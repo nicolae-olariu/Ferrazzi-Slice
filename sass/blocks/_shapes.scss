@@ -1,0 +1,164 @@
+.demo-shapes {
+	height: 60rem;
+}
+
+$small: 3rem;
+$medium: 5rem;
+$big: 9rem;
+
+@mixin generateShapesClasses($color, $tone: 'base') {
+	&-top {
+		&-left {
+			&-small {
+				&:before {
+					border-width: $small 0 0 100vw;
+					border-color: transparent transparent transparent palette($color, $tone);
+					bottom: 100%;
+				}
+			}
+			&-medium {
+				&:before {
+					border-width: $medium 0 0 100vw;
+					border-color: transparent transparent transparent palette($color, $tone);
+					bottom: 100%;
+					
+					@include respondTo(phone){
+						border-width: $small 0 0 100vw;
+					}
+				}
+			}
+			&-big {
+				&:before {
+					border-width: $big 0 0 100vw;
+					border-color: transparent transparent transparent palette($color, $tone);
+					bottom: 100%;
+					
+					@include respondTo(phone){
+						border-width: $medium 0 0 100vw;
+					}
+				}
+			}
+		}
+		
+		&-right {
+			&-small {
+				&:before {
+					border-width: 0 0 $small 100vw;
+					border-color: transparent transparent palette($color, $tone) transparent;
+					bottom: 100%;
+				}
+			}
+			&-medium {
+				&:before {
+					border-width: 0 0 $medium 100vw;
+					border-color: transparent transparent palette($color, $tone) transparent;
+					bottom: 100%;
+					@include respondTo(phone){
+						border-width: 0 0 $small 100vw;
+					}
+				}
+			}
+			&-big {
+				&:before {
+					border-width: 0 0 $big 100vw;
+					border-color: transparent transparent palette($color, $tone) transparent;
+					bottom: 100%;
+					
+					@include respondTo(phone){
+						border-width: 0 0 $medium 100vw;
+					}
+				}
+			}
+		}
+	}
+	&-bottom {
+		&-left {
+			&-small {
+				&:after {
+					border-width: $small 100vw 0 0;
+					border-color: palette($color, $tone) transparent transparent transparent;
+					top: 100%;
+					margin-top: -0.1rem;
+				}
+			}
+			&-medium {
+				&:after {
+					border-width: $medium 100vw 0 0;
+					border-color: palette($color, $tone) transparent transparent transparent;
+					top: 100%;
+					@include respondTo(phone){
+						border-width: $small 100vw 0 0;
+					}
+				}
+			}
+			&-big {
+				&:after {
+					border-width: $big 100vw 0 0;
+					border-color: palette($color, $tone) transparent transparent transparent;
+					top: 100%;
+					@include respondTo(phone){
+						border-width: $medium 100vw 0 0;
+					}
+				}
+			}
+		}
+		
+		&-right {
+			&-small {
+				&:after {
+					border-width: 0 100vw $small 0;
+					border-color: transparent palette($color, $tone) transparent transparent;
+					top: 100%;
+				}
+			}
+			&-medium {
+				&:after {
+					border-width: 0 100vw $medium 0;
+					border-color: transparent palette($color, $tone) transparent transparent;
+					top: 100%;
+					@include respondTo(phone){
+						border-width: 0 100vw $small 0;
+					}
+				}
+			}
+			&-big {
+				&:after {
+					border-width: 0 100vw $big 0;
+					border-color: transparent palette($color, $tone) transparent transparent;
+					top: 100%;
+					@include respondTo(phone){
+						border-width: 0 100vw $medium 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.shape {
+	position: relative;
+	z-index: 1;
+	&:before,
+	&:after {
+		content: "";
+		width: 0;
+		height: 0;
+		border: 0 solid transparent;
+		position: absolute;
+	}
+	&-blue-light{
+		@include generateShapesClasses(blue, light);
+	}
+	&-black-light{
+		@include generateShapesClasses(black, light);
+	}
+	&-green{
+		@include generateShapesClasses(green, base);
+	}
+	&-green-light{
+		@include generateShapesClasses(green, light);
+	}
+	&-black-ultra-dark{
+		@include generateShapesClasses(black, ultra-dark);
+	}
+}

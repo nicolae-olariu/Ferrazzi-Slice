@@ -1,0 +1,26 @@
+@import "functions/variables";
+@import "functions/mixin";
+@import "functions/fonts";
+// include settings
+@import "blocks/_settings";
+// include layouts
+@import "layout/header";
+@import "layout/footer";
+@import "blocks/_slider";
+@import "blocks/_title-section";
+@import "blocks/_expertise-diagram";
+@import "blocks/_shapes";
+@import "blocks/_testimonial-single";
+@import "blocks/_about-us-section";
+@import "blocks/_testimonials-sliders";
+@import "blocks/_latest-insights-pattern";
+@import "blocks/_get-to-know-us-section";
+@import "blocks/_newsletter-form";
+@import "blocks/_social-media";
+@import "blocks/_header-pages";
+@import "blocks/_breadcrumbs";
+@import "blocks/content-blocks";
+@import "blocks/form-style";
+@import "blocks/partner-with-us";
+@import "layout/expertise-page";
+@import "layout/the-fg-way";

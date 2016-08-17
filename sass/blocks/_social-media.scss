@@ -1,0 +1,41 @@
+.social-media-block {
+	position: absolute;
+	right: 0;
+	top: 17rem;
+	z-index: 10;
+
+	li {
+		width: 3.6rem;
+		height: 3.6rem;
+		background-color: palette(white, dark);
+		margin: 0 1.5rem 1rem 0;
+
+		@include border-radius(50%);
+
+		&.facebook-square:hover a {
+			color: #3b5998;
+		}
+
+		&.twitter:hover a {
+			color: #4099FF;
+		}
+
+		&.linkedin:hover a {
+			color: #0077B5;
+		}
+
+		&.envelope:hover a {
+			color: palette(green);
+		}
+
+		a {
+			display: block;
+			font-size: 2rem;
+			line-height: 3.6rem;
+			text-align: center;
+			color: #d1d2d4;
+
+			@include transition();
+		}
+	}
+}

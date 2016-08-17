@@ -1,0 +1,79 @@
+.form {
+	&__label {
+		width: 100%;
+		font-size: 1.4rem;
+		color: palette(black, dark);
+		text-indent: 1rem;
+		@extend .font__bold;
+		
+		&--required {
+			&:after {
+				content: '*';
+				color: palette(red);
+				@extend .font__bold;
+			}
+		}
+	}
+	
+	&__input {
+		width: 100%;
+		height: 5rem;
+		border: 1px solid palette(grey);
+		font-size: 1.6rem;
+		line-height: 4rem;
+		padding: 1rem;
+		margin-bottom: 1.5rem;
+		&--required {
+			
+		}
+		
+		&--phone {
+			&:nth-child(3n+1) {
+				margin-right: .5%;
+			}
+			&:nth-child(3n+1),
+			&:nth-child(3n+2) {
+				width: 29%;
+			}
+			
+			&:nth-child(3n) {
+				width: 39%;
+				float: right;
+			}
+		}
+		
+		&--textarea {
+			resize: none;
+			max-width: 100%;
+			min-width: 100%;
+			min-height: 13rem;
+		}
+	}
+	
+	&__message {
+		padding-top: 2rem;
+		padding-right: 2rem;
+		@extend .font__bold;
+		
+		&.error {
+			color: palette(red);
+		}
+		
+		&.success {
+			color: palette(green);
+		}
+	}
+	
+	&__loader{
+		font-size: 2.5rem;
+		margin-left: 1rem;
+		display: inline-block;
+		@include transform(scale(0));
+		opacity: 0;
+				
+		&--show{
+			@include transform(scale(1));
+			opacity: 1;
+		}
+	}
+}

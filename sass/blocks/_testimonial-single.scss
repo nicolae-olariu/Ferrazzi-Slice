@@ -1,0 +1,85 @@
+.testimonial-single {
+	background-color: palette(black, light);
+	font-size: 0;
+	padding: 2.5rem 0;
+	
+	&.black__bg--ultra-dark{
+		background-color: palette(black, ultra-dark);
+	}
+	
+	&--blue-light{
+		background-color: palette(blue, light);
+	}
+
+	.quote-symbol {
+		font-size: 14rem;
+		color: palette(white, dark);
+		width: 10%;
+		display: inline-block;
+		opacity: 0.07;
+		line-height: 1;
+
+		@include fall-font(NewsGothicMT Bold);
+		@include respondTo(tablet){
+			font-size: 10rem;
+			vertical-align: top;
+		}
+		
+		@include respondTo(phone){
+			display: none;
+		}
+
+		&.quote-close {
+			margin: 1.5rem 0 -2rem;
+
+			@include transform(rotate(180deg));
+			@include respondTo(tablet){
+				margin: 4.5rem 0 -2rem;
+			}
+		}
+	}
+
+	.quote-content {
+		display: inline-block;
+		width: 80%;
+		vertical-align: top;
+		margin-top: 2.5rem;
+
+		@include fall-font(NewsGothicMT Bold);
+		
+		@include respondTo(phone){
+			width: 100%;
+		}
+
+		.testimonial-content {
+			color: palette(white, dark);
+			font-size: 3.2rem;
+			letter-spacing: -0.03em;
+			line-height: 1;
+			margin-bottom: 3rem;
+			
+			@include respondTo(phone){
+				font-size: 2rem;
+				line-height: 2.3rem;
+			}
+		}
+	}
+}
+.testimonial-owner {
+	text-align: right;
+	font-size: 1.3rem;
+	color: #c8c8c8;
+	letter-spacing: -0.02em;
+	line-height: 1.6rem;
+	p {
+		margin: 0;
+
+		i{
+			@include fall-font(NewsGothicMT Italic);
+		}
+		& + p{
+			padding-top: .5rem;
+			text-transform: uppercase;
+		}
+	}
+}

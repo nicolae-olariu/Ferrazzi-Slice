@@ -1,0 +1,13 @@
+.partner-with-us {
+	ul {
+		@include respondTo(phone) {
+			padding: 0;
+		}
+	}
+	
+	.text-right{
+		@include respondTo(phone){
+			text-align: center;
+		}
+	}
+}

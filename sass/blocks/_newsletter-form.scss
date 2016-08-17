@@ -1,0 +1,98 @@
+.newsletter-form {
+	width: 100%;
+	.loading-form {
+		button {
+			.block-url-button {
+				opacity: 0;
+			}
+			.loading-button {
+				opacity: 1;
+			}
+		}
+	}
+	input {
+		display: inline-block;
+		border: 0 none;
+		text-align: left;
+		background-color: palette(white);
+		height: 4.7rem;
+		font-size: 1.7rem;
+		line-height: 4.7rem;
+		letter-spacing: -0.02em;
+		padding: 0 1.5rem;
+	}
+	
+	button {
+		display: inline-block;
+		border: 0 none;
+		height: 4.7rem;
+		background-color: palette(blue, dark);
+		position: relative;
+		
+		.block-url-button {
+			position: relative;
+			z-index: 1;
+			
+			@include transition(none !important);
+		}
+		
+		.loading-button {
+			width: 2rem;
+			height: 2rem;
+			text-align: center;
+			z-index: 10;
+			color: palette(white, dark);
+			opacity: 0;
+			
+			@include absolute-center();
+			
+			i {
+				font-size: 2rem;
+				line-height: 2rem;
+			}
+		}
+	}
+	
+	&__short {
+		text-align: center;
+		font-size: 0;
+		
+		input {
+			width: 31.5rem;
+			max-width: 77%;
+		}
+		
+		button {
+			width: 7.1rem;
+			max-width: 23%;
+		}
+	}
+}
+
+.newsletter-section {
+	.block-about-us .block-content i {
+		color: palette(white, dark);
+		letter-spacing: -0.02em;
+	}
+	.newsletter-form button .block-url-button {
+		width: 2.5rem;
+		height: 2.5rem;
+		border: 0.2rem solid palette(white, dark);
+		text-align: center;
+		display: inline-block;
+		@include border-radius(50%);
+		@include transition();
+		
+		i {
+			font-size: 2rem;
+			line-height: 2rem;
+			@include transition();
+			color: palette(white, dark);
+		}
+	}
+	
+	.container .newsletter-form form p.message-response.success {
+		color: palette(blue);
+		padding-left: 1rem;
+	}
+}

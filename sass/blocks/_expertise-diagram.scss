@@ -1,0 +1,328 @@
+.expertise-diagram {
+	background: no-repeat center center/cover;
+	padding: 2.5rem 0;
+
+	h2 {
+		color: palette(blue);
+	}
+
+	.overflow-hidden {
+		overflow: hidden;
+	}
+
+	.main-container-diagram {
+		width: 100%;
+		float: left;
+		padding: 10rem 0 24rem;
+
+		.diagram-big-4 {
+			float: left;
+			width: 25%;
+			min-height: 17.2rem;
+			text-align: center;
+			position: relative;
+
+			&:first-child {
+				.inner-diagram:before {
+					content: none;
+				}
+			}
+
+			&:last-child {
+				.inner-diagram:after {
+					content: none;
+				}
+			}
+
+			.inner-diagram {
+				width: 17.2rem;
+				height: 17.2rem;
+				position: relative;
+				border: .6rem solid palette(blue, light);
+				display: inline-block;
+				z-index: 10;
+				cursor: pointer;
+
+				@include transition();
+				@include border-radius(50%);
+
+				&:hover {
+					border-color: palette(green, light);
+					.middle-circle {
+						background-color: palette(green, light);
+
+						h3{
+							color: palette(blue, dark);
+						}
+					}
+				}
+
+				&:before,
+				&:after {
+					content: "";
+					width: 100%;
+					height: .4rem;
+					background-color: palette(grey);
+					position: absolute;
+					top: 50%;
+					margin-top: -.2rem;
+					cursor: default;
+					z-index: 1;
+					pointer-events: none;
+				}
+
+				&:before {
+					right: 103.5%;
+				}
+
+				&:after {
+					left: 103.5%;
+				}
+
+				.middle-circle {
+					width: 8.6rem;
+					height: 8.6rem;
+					background-color: palette(blue, light);
+
+					@include transition();
+					@include border-radius(50%);
+					@include absolute-center();
+
+					h3 {
+						color: palette(white, dark);
+						font-size: 1.3rem;
+						line-height: 1.6rem;
+						letter-spacing: -0.02em;
+						margin: 0;
+
+						@include fall-font(NewsGothicMT Bold);
+						@include absolute-center();
+					}
+				}
+			}
+
+			.child-diagram-wrapper-bottom {
+				float: left;
+				margin-top: -1.4rem;
+				padding-top: 1.5rem;
+				position: absolute;
+				z-index: 9;
+				top: 100%;
+				left: 50%;
+				width: 26.5rem;
+				@include transform(translateX(-50%));
+
+				> .overflow-hidden{
+					margin-top: -1.4rem;
+					padding-top: 1.5rem;
+					position: relative;
+					z-index: 10;
+
+				}
+
+				.inner-diagram {
+					width: 11rem;
+					height: 11rem;
+					margin: 0 1rem;
+
+					&.position-left {
+						&:after {
+							content: "";
+							bottom: 13.7rem;
+							top: auto;
+							left: 50%;
+
+							@include transform(rotate(-56deg));
+						}
+
+						&:before {
+							content: none;
+						}
+					}
+
+					&.position-right {
+						&:after {
+							content: none;
+						}
+
+						&:before {
+							content: "";
+							bottom: 13.7rem;
+							top: auto;
+							right: 50%;
+
+							@include transform(rotate(56deg));
+						}
+					}
+
+					.middle-circle {
+						width: 5.4rem;
+						height: 5.4rem;
+					}
+				}
+			}
+
+			.child-diagram-wrapper-top {
+				float: left;
+				position: absolute;
+				z-index: 9;
+				bottom: 100%;
+				left: 50%;
+				width: 26.5rem;
+				@include transform(translateX(-50%));
+
+				> .overflow-hidden{
+					margin-bottom: -1rem;
+					padding-bottom: 1.5rem;
+				}
+
+				.inner-diagram {
+					width: 11rem;
+					height: 11rem;
+					margin: 0 1rem;
+
+					&.position-left {
+						&:after {
+							content: "";
+							bottom: 13.7rem;
+							top: auto;
+							left: 50%;
+
+							@include transform(rotate(56deg));
+						}
+
+						&:before {
+							content: none;
+						}
+					}
+
+					&.position-right {
+						&:after {
+							content: none;
+						}
+
+						&:before {
+							content: "";
+							top: 13.7rem;
+							bottom: auto;
+							right: 50%;
+
+							@include transform(rotate(-56deg));
+						}
+					}
+
+					.middle-circle {
+						width: 5.4rem;
+						height: 5.4rem;
+					}
+				}
+			}
+
+			.child-diagram-wrapper-bottom-second-level {
+				float: left;
+				margin-top: -3rem;
+				padding-top: 1rem;
+				overflow: hidden;
+				position: absolute;
+				z-index: 8;
+				top: 100%;
+				left: 50%;
+				width: 26.5rem;
+				@include transform(translateX(-50%));
+
+				.diagram-small-2{
+					width: 50%;
+					float: left;
+					padding-top: 2rem;
+				}
+
+				.inner-diagram {
+					width: 11rem;
+					height: 11rem;
+					margin: 0 1rem;
+
+					&.position-left-top-left {
+						&:after {
+							content: "";
+							left: 107%;
+							width: 2rem;
+						}
+
+						&:before {
+							content: "";
+							right: auto;
+							left: 8.3rem;
+							top: auto;
+							bottom: 11rem;
+							transform: rotate(-40deg);
+						}
+					}
+
+					&.position-right-left {
+						&:after {
+							content: none;
+						}
+
+						&:before {
+							content: "";
+							right: 106%;
+							width: 2rem;
+						}
+					}
+
+					.middle-circle {
+						width: 5.4rem;
+						height: 5.4rem;
+					}
+				}
+			}
+		}
+	}
+
+	.pop-up-diagram{
+		position: absolute;
+		width: 30rem;
+		padding: 3rem;
+		background-color: transparentize(palette(green, light), 0.1);
+		z-index: 100;
+		display: none;
+		pointer-events: none;
+		min-height: 13.5rem;
+
+		@include transform(translate(50%, -30%));
+
+		&:before{
+			content: "";
+			position: absolute;
+			top: 100%;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 3rem 1.7rem 0 1.7rem;
+			border-color: transparentize(palette(green, light), 0.1) transparent transparent transparent;
+		}
+		&.left-arrow{
+			&:before{
+				left: 3.5rem;
+			}
+		}
+
+		&.right-arrow{
+			&:before{
+				right: 3.5rem;
+			}
+		}
+
+
+		@include border-radius(2rem);
+		.content-diagram{
+			font-size: 1.3rem;
+			letter-spacing: -0.02em;
+			line-height: 1.5rem;
+			color: palette(white, dark);
+			text-align: center;
+
+			@include fall-font(NewsGothicMT Bold);
+		}
+	}
+}
