@@ -1,0 +1,8 @@
+.position-section {
+    .position-section--ul {
+        @include respondTo(notdesktop) {
+            padding: 0 !important;
+        }
+    }
+}
+

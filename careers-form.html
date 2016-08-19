@@ -33,6 +33,7 @@
 
     <!-- two rows description -->
     <div class="row">
+      <!-- single column -->
       <div class="col-sm-6 col-xs-12 black__color--dark padding-top-1">
         <h2>What You’ll Do</h2>
         <div
@@ -55,6 +56,8 @@
         </div>
       </div>
 
+      <!-- end single column -->
+
       <div class="col-sm-6 col-xs-12 black__color--dark padding-top-1">
         <h2>Skills You’ll Bring</h2>
         <div
@@ -76,30 +79,83 @@
 
     <div ng-controller="CareersPositionController as ctrl">
       <form name="ctrl.careersForm" ng-submit="ctrl.submitForm()">
-        <input type="text"
-               name="firstName"
-               ng-model="ctrl.firstName"
-               required>
-        <input type="text"
-               name="lastName"
-               ng-model="ctrl.lastName"
-               required>
-        <input type="email"
-               name="email"
-               ng-model="ctrl.email"
-               required>
-        <input type="number"
-               name="phone"
-               ng-model="ctrl.phone"
-               required>
-        <textarea name="coverLetter"
-                  id=""
+        <div class="partner-with-us__title h1--larger green__color reset margin-left--2 margin-bottom-2">
+          <h4>Apply</h4>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-xs-12 pad">
+            <ul class="list-unstyled padding-right-3 position-section--ul">
+              <li>
+                <label for="firstName" class="form__label form__label--required">First Name</label>
+                <input class="form__input form__input--required"
+                       type="text"
+                       id="firstName"
+                       name="firstName"
+                       ng-model="ctrl.firstName"
+                       required>
+              </li>
+              <li>
+                <label for="lastName" class="form__label form__label--required">Last Name</label>
+                <input class="form__input form__input--required"
+                       type="text"
+                       id="lastName"
+                       name="lastName"
+                       ng-model="ctrl.lastName"
+                       required>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-sm-6 col-xs-12">
+            <ul class="list-unstyled padding-left-3 position-section--ul">
+              <li>
+                <label for="email" class="form__label form__label--required">Email Address</label>
+                <input class="form__input form__input--required"
+                       type="email"
+                       id="email"
+                       name="email"
+                       ng-model="ctrl.email"
+                       required>
+              </li>
+              <li>
+                <label for="phoneFirst" class="form__label form__label--required">Phone</label>
+                <div>
+                  <input class="form__input form__input--phone"
+                         type="text"
+                         id="phoneFirst"
+                         name="phoneFirst"
+                         ng-model="ctrl.phoneFirst"
+                         required>
+
+                  <input class="form__input form__input--phone"
+                         type="text"
+                         name="phoneSecond"
+                         ng-model="ctrl.phoneSecond"
+                         required>
+
+                  <input class="form__input form__input--phone"
+                         type="text"
+                         name="phoneFinal"
+                         ng-model="ctrl.phoneFinal"
+                         required>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <label for="coverLetter" class="form__label form__label--required">Cover Letter</label>
+        <textarea class="form__input form__input--required form__input--textarea"
+                  name="coverLetter"
+                  id="coverLetter"
                   cols="30"
                   rows="10"
                   ng-model="ctrl.coverLetter"
                   required>
         </textarea>
-        <button>Submit</button>
+        <button class="btn btn-slider white__hover-color white__color--dark green__bg green__hover-bg--semi-dark">
+          Submit
+        </button>
       </form>
     </div>
 
