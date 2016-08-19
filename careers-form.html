@@ -19,27 +19,79 @@
 <section class="position-section">
   <div class="container">
 
+    <div class="black__color--dark padding-top-2">
+      <h1>Why We Want You</h1>
+    </div>
+    <div class="paragraph padding-top-2 black__color--dark">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis vulputate tortor. Duis a vehicula nibh.
+        Phasellus vestibulum, lectus quis congue fermentum, dui odio sodales.Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. In quis vulputate tortor. Duis a vehicula nibh. Phasellus vestibulum, lectus quis congue
+        fermentum. Duis a vehicula nibh. Phasellus vestibulum, lectus quis congue fermentum, dui odio sodales.Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. In quis vulputate tortor. Duis a vehicula nibh. Phasellus
+        vestibulum, lectus quis congue fermentum.</p>
+    </div>
 
+    <!-- two rows description -->
+    <div class="row">
+      <div class="col-sm-6 col-xs-12 black__color--dark padding-top-1">
+        <h2>What You’ll Do</h2>
+        <div
+          class="content-blocks__text paragraph black__color--dark padding-top-1 padding-bottom-1 about-description__list">
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis vulputate tortor.</li>
+            <li>Duis a vehicula nibh. Phasellus vestibulum, lectus quis congue fermentum, dui odio sodales.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis vulputate tortor. Duis a vehicula
+              nibh.
+            </li>
+            <li>Phasellus vestibulum, lectus quis congue fermentum, dui odio sodales.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur dui odioadipiscing elit.</li>
+            <li>Duis a vehicula nibh. Phasellus vestibulum, lectus quis congue fermentum, dui odio sodales.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis vulputate tortor. Duis a vehicula
+              nibh.
+            </li>
+            <li>Phasellus vestibulum, lectus quis congue fermentum, dui odio sodales.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur dui odioadipiscing elit.</li>
+          </ul>
+        </div>
+      </div>
 
+      <div class="col-sm-6 col-xs-12 black__color--dark padding-top-1">
+        <h2>Skills You’ll Bring</h2>
+        <div
+          class="content-blocks__text paragraph black__color--dark padding-top-1 padding-bottom-1 about-description__list">
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis vulputate tortor.</li>
+            <li>Duis a vehicula nibh. Phasellus vestibulum, lectus quis congue fermentum, dui odio sodales.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis vulputate tortor. Duis a vehicula
+              nibh.
+            </li>
+            <li>Dui odio sodales.Lorem ipsum dolor sit amet, consectetur</li>
+            <li>Phasellus vestibulum, lectus quis congue fermentum, dui odio sodales.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur dui odioadipiscing elit.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
 
     <div ng-controller="CareersPositionController as ctrl">
       <form name="ctrl.careersForm" ng-submit="ctrl.submitForm()">
         <input type="text"
-                name="firstName"
-                ng-model="ctrl.firstName"
-                required>
+               name="firstName"
+               ng-model="ctrl.firstName"
+               required>
         <input type="text"
-                name="lastName"
-                ng-model="ctrl.lastName"
-                required>
+               name="lastName"
+               ng-model="ctrl.lastName"
+               required>
         <input type="email"
-                name="email"
-                ng-model="ctrl.email"
-                required>
+               name="email"
+               ng-model="ctrl.email"
+               required>
         <input type="number"
-                name="phone"
-                ng-model="ctrl.phone"
-                required>
+               name="phone"
+               ng-model="ctrl.phone"
+               required>
         <textarea name="coverLetter"
                   id=""
                   cols="30"
