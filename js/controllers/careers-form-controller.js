@@ -6,11 +6,16 @@
 
   function CareersPositionController(AppEntity, SendEmailCommand) {
     var vm = this;
-    debugger
 
     vm.AppEntity = AppEntity;
 
     vm.submitFormHandler = submitFormHandler;
+
+    vm.submitForm = submitForm;
+
+    function submitForm() {
+      console.log(vm);
+    }
 
     function submitFormHandler() {
       if(vm.AppEntity.validateForm()) {
