@@ -1,8 +1,22 @@
 .position-section {
-    .position-section--ul {
+    .position-section__ul {
         @include respondTo(notdesktop) {
             padding: 0 !important;
         }
     }
+
+    .position-section__form {
+        overflow: hidden;
+        max-height: 0;
+        transition: transform 1s ease,  max-height 1s linear;
+        transform: scale(0.0);
+
+        &.form__is-expanded {
+            height: 100%;
+            max-height: 100rem;
+            transform: scale(1.0);
+        }
+    }
+
 }
 

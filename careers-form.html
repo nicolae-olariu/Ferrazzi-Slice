@@ -19,8 +19,8 @@
 <section class="position-section">
   <div class="container">
 
-    <div class="black__color--dark padding-top-2">
-      <h1>Why We Want You</h1>
+    <div class="black__color--dark padding-top-2 margin-left--2">
+      <h1 id="wtf">Why We Want You</h1>
     </div>
     <div class="paragraph padding-top-2 black__color--dark">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis vulputate tortor. Duis a vehicula nibh.
@@ -78,89 +78,131 @@
     </div>
 
     <div ng-controller="CareersPositionController as ctrl">
-      <form name="ctrl.careersForm" ng-submit="ctrl.submitForm()">
-        <div class="partner-with-us__title h1--larger green__color reset margin-left--2 margin-bottom-2">
-          <h4>Apply</h4>
-        </div>
-        <div class="row">
-          <div class="col-sm-6 col-xs-12 pad">
-            <ul class="list-unstyled padding-right-3 position-section--ul">
-              <li>
-                <label for="firstName" class="form__label form__label--required">First Name</label>
-                <input class="form__input form__input--required"
-                       type="text"
-                       id="firstName"
-                       name="firstName"
-                       ng-model="ctrl.firstName"
-                       required>
-              </li>
-              <li>
-                <label for="lastName" class="form__label form__label--required">Last Name</label>
-                <input class="form__input form__input--required"
-                       type="text"
-                       id="lastName"
-                       name="lastName"
-                       ng-model="ctrl.lastName"
-                       required>
-              </li>
-            </ul>
-          </div>
+      <div id="formId">
+        <div class="position-section__form"
+             ng-class="{'form__is-expanded': ctrl.formExpanded}"
+        >
 
-          <div class="col-sm-6 col-xs-12">
-            <ul class="list-unstyled padding-left-3 position-section--ul">
-              <li>
-                <label for="email" class="form__label form__label--required">Email Address</label>
-                <input class="form__input form__input--required"
-                       type="email"
-                       id="email"
-                       name="email"
-                       ng-model="ctrl.email"
-                       required>
-              </li>
-              <li>
-                <label for="phoneFirst" class="form__label form__label--required">Phone</label>
-                <div>
-                  <input class="form__input form__input--phone"
-                         type="text"
-                         id="phoneFirst"
-                         name="phoneFirst"
-                         ng-model="ctrl.phoneFirst"
-                         required>
+          <form name="ctrl.careersForm" ng-submit="ctrl.submitForm()">
 
-                  <input class="form__input form__input--phone"
-                         type="text"
-                         name="phoneSecond"
-                         ng-model="ctrl.phoneSecond"
-                         required>
+            <div class="green__color reset margin-bottom-2 padding-top-1 padding-bottom-1">
+              <h2>Apply</h2>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-xs-12 pad">
+                <ul class="list-unstyled padding-right-3 position-section__ul">
+                  <li>
+                    <label for="firstName" class="form__label form__label--required">First Name</label>
+                    <input class="form__input form__input--required"
+                           type="text"
+                           id="firstName"
+                           name="firstName"
+                           ng-model="ctrl.firstName"
+                           required>
+                  </li>
+                  <li>
+                    <label for="lastName" class="form__label form__label--required">Last Name</label>
+                    <input class="form__input form__input--required"
+                           type="text"
+                           id="lastName"
+                           name="lastName"
+                           ng-model="ctrl.lastName"
+                           required>
+                  </li>
+                </ul>
+              </div>
 
-                  <input class="form__input form__input--phone"
-                         type="text"
-                         name="phoneFinal"
-                         ng-model="ctrl.phoneFinal"
-                         required>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+              <div class="col-sm-6 col-xs-12">
+                <ul class="list-unstyled padding-left-3 position-section__ul">
+                  <li>
+                    <label for="email" class="form__label form__label--required">Email Address</label>
+                    <input class="form__input form__input--required"
+                           type="email"
+                           id="email"
+                           name="email"
+                           ng-model="ctrl.email"
+                           required>
+                  </li>
+                  <li>
+                    <label for="phoneFirst" class="form__label form__label--required">Phone</label>
+                    <div>
+                      <input class="form__input form__input--phone"
+                             type="text"
+                             id="phoneFirst"
+                             name="phoneFirst"
+                             ng-model="ctrl.phoneFirst"
+                             required>
 
-        <label for="coverLetter" class="form__label form__label--required">Cover Letter</label>
-        <textarea class="form__input form__input--required form__input--textarea"
-                  name="coverLetter"
-                  id="coverLetter"
-                  cols="30"
-                  rows="10"
-                  ng-model="ctrl.coverLetter"
-                  required>
+                      <input class="form__input form__input--phone"
+                             type="text"
+                             name="phoneSecond"
+                             ng-model="ctrl.phoneSecond"
+                             required>
+
+                      <input class="form__input form__input--phone"
+                             type="text"
+                             name="phoneFinal"
+                             ng-model="ctrl.phoneFinal"
+                             required>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <label for="coverLetter" class="form__label form__label--required">Cover Letter</label>
+            <textarea class="form__input form__input--required form__input--textarea"
+                      name="coverLetter"
+                      id="coverLetter"
+                      cols="30"
+                      rows="10"
+                      ng-model="ctrl.coverLetter"
+                      required>
         </textarea>
-        <button class="btn btn-slider white__hover-color white__color--dark green__bg green__hover-bg--semi-dark">
-          Submit
+            <button class="btn btn-slider white__hover-color white__color--dark green__bg green__hover-bg--semi-dark">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-xs-12 text-center">
+        <button
+          class="btn btn-slider white__hover-color white__color--dark green__bg text-uppercase green__hover-bg--semi-dark"
+          ng-click="ctrl.formExpanded=true; ctrl.scrollTo('formId')">
+          Apply
         </button>
-      </form>
+      </div>
     </div>
 
 
   </div>
 </section>
+<footer class="footer">
+  <div class="container padding-bottom-2">
+    <div class="row">
+      <div class="col-sm-4 col-xs-12 footer__logo">
+        <a href="http://ferrazzi.projects-directory.com">
+          <img src="http://ferrazzi.projects-directory.com/wp-content/uploads/2016/05/logo-long.png" alt="Ferrazzi Greenlight" width="181" height="27" class="img-responsive">
+        </a>
+      </div>
+      <div class="col-sm-4 col-xs-12 footer__copyrights text-center">
+        <div class="footer__copyrights--hide">
+          <p>© 2016 Ferrazzi Greenlight | <a href="http://ferrazzi.projects-directory.com/privacy-policy/">Privacy Policy</a></p>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-12 footer-copyrights text-right">
+        <div class="footer__more">
+          <span class="white__color--dark paragraph--small upper font__bold"></span>
+          <i class="fa fa-angle-down green__color" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="go-top-page footer__top-page">
+    <i class="fa fa-angle-up"></i>
+    <p>TOP</p>
+  </div>
+</footer>
 </body>
 </html>

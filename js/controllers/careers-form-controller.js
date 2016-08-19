@@ -1,24 +1,31 @@
-(function() {
+(function () {
   'use strict';
 
   angular.module('careers-position')
     .controller('CareersPositionController', CareersPositionController);
 
-  function CareersPositionController(AppEntity, SendEmailCommand) {
+  function CareersPositionController($anchorScroll, $timeout, AppEntity, SendEmailCommand) {
     var vm = this;
 
     vm.AppEntity = AppEntity;
 
     vm.submitFormHandler = submitFormHandler;
-
     vm.submitForm = submitForm;
+    vm.scrollTo = scrollTo;
+
+    function scrollTo(id) {
+      $timeout(function(){
+        $anchorScroll(id);
+    }, 500);
+    }
 
     function submitForm() {
+      console.log("nasol");
       console.log(vm);
     }
 
     function submitFormHandler() {
-      if(vm.AppEntity.validateForm()) {
+      if (vm.AppEntity.validateForm()) {
         vm.AppEntity.errorMessage = undefined;
         SendEmailCommand.execute();
       } else {
