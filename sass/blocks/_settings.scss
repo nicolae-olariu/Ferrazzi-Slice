@@ -825,3 +825,26 @@ section .container .newsletter-form form p.message-response {
 		font-size: 1.2rem;
 	}
 }
+
+
+.submit-error {
+	@include animation(shake 1s cubic-bezier(.36,.07,.19,.97) both);
+}
+
+@include keyframes(shake) {
+	10%, 90% {
+		@include transform(translateX(-1px));
+	}
+
+	20%, 80% {
+		@include transform(translateX(2px));
+	}
+
+	30%, 50%, 70% {
+		@include transform(translateX(-4px));
+	}
+
+	40%, 60% {
+		@include transform(translateX(4px));
+	}
+}
