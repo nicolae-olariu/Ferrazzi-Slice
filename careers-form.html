@@ -16,7 +16,7 @@
   <script src="js/commands/send-email.command.js"></script>
 </head>
 <body ng-app="careers-position">
-<section class="position-section">
+<section class="position-section padding-bottom-3">
   <div class="container">
 
     <div class="black__color--dark padding-top-2 margin-left--2">
@@ -162,30 +162,45 @@
 
             <div class="col-md-8 col-sm-8 col-xs-12">
               <div class="row">
-                <label for="cv"
-                       class="btn btn-slider white__hover-color white__color--dark blue__bg--light blue__hover-bg text-uppercase"
-                >Upload Resume</label>
-                <input
-                  type="file"
-                  name="cv"
-                  id="cv"
-                  accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, text/plain, application/pdf,"
-                  style="display: none">
+                <div class="col-md-4 col-sm-5 col-xs-6 padding-right-2 text-center position-section__upload-container">
+                  <div class="row">
+                    <label for="cv"
+                           class="btn btn-slider position-section__button white__hover-color white__color--dark blue__bg--light blue__hover-bg text-uppercase"
+                    >Upload Resume</label>
+                    <input
+                      type="file"
+                      name="cv"
+                      id="cv"
+                      accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, text/plain, application/pdf,"
+                      style="display: none">
+                    <label for="cv"
+                           class="info-label padding-left-2"
+                    >Must be less than 2MB doc or pdf format only</label>
+                  </div>
+                </div>
 
-                <label for="aditional"
-                       class="btn btn-slider white__hover-color white__color--dark blue__bg--light blue__hover-bg text-uppercase position-section__button--tight"
-                >Upload Additional <br> Documents</label>
-                <input
-                  type="file"
-                  name="aditional"
-                  id="aditional"
-                  accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, text/plain, application/pdf,"
-                  style="display: none">
+                <div class="col-md-4 col-sm-5 col-xs-6 text-center position-section__upload-container">
+                  <div class="row">
+                    <label for="aditional"
+                           class="btn btn-slider position-section__button white__hover-color white__color--dark blue__bg--light blue__hover-bg text-uppercase position-section__button--tight"
+                    >Upload Additional <br> Documents</label>
+                    <input
+                      type="file"
+                      name="aditional"
+                      id="aditional"
+                      accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, text/plain, application/pdf,"
+                      multiple
+                      style="display: none">
+                    <label for="aditional"
+                           class="info-label padding-left-2"
+                    >Must be less than 2MB doc or pdf format only</label>
+                  </div>
+                </div>
 
               </div>
             </div>
 
-            <div class="col-md-4 col-sm-4 col-xs-12 text-right">
+            <div class="col-md-4 col-sm-4 col-xs-12 text-right position-section__button--submit">
               <div class="row">
                 <button
                   class="btn btn-slider white__hover-color white__color--dark green__bg green__hover-bg--semi-dark text-uppercase">
