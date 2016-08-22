@@ -18,8 +18,8 @@
                 object-fit: cover;
                 object-position: center;
                 &:hover {
-                    transform: scale(1.1);
-                    transition: transform 1s ease-in-out;
+                    @include transform(scale(1.1));
+                    @include transition(transform 1s ease-in-out);
                 }
             }
         }
