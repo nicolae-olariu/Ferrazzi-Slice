@@ -807,3 +807,21 @@ section .container .newsletter-form form p.message-response {
 		}
 	}
 }
+
+.info-label {
+	width: 97%;
+	font-size: 1.2rem;
+	text-align: center;
+	font-weight: 400;
+	margin-bottom: 0;
+	@include respondTo(phone) {
+		font-size: 1rem;
+	}
+	&:before {
+		content: '*';
+		display: inherit;
+		margin-top: 0.6rem;
+		font-family: sans-serif;
+		font-size: 1.2rem;
+	}
+}
