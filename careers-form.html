@@ -159,15 +159,47 @@
                       ng-model="ctrl.coverLetter"
                       required>
         </textarea>
-            <button class="btn btn-slider white__hover-color white__color--dark green__bg green__hover-bg--semi-dark">
-              Submit
-            </button>
+
+            <div class="col-md-8 col-sm-8 col-xs-12">
+              <div class="row">
+                <label for="cv"
+                       class="btn btn-slider white__hover-color white__color--dark blue__bg--light blue__hover-bg text-uppercase"
+                >Upload Resume</label>
+                <input
+                  type="file"
+                  name="cv"
+                  id="cv"
+                  accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, text/plain, application/pdf,"
+                  style="display: none">
+
+                <label for="aditional"
+                       class="btn btn-slider white__hover-color white__color--dark blue__bg--light blue__hover-bg text-uppercase position-section__button--tight"
+                >Upload Additional <br> Documents</label>
+                <input
+                  type="file"
+                  name="aditional"
+                  id="aditional"
+                  accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, text/plain, application/pdf,"
+                  style="display: none">
+
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12 text-right">
+              <div class="row">
+                <button
+                  class="btn btn-slider white__hover-color white__color--dark green__bg green__hover-bg--semi-dark text-uppercase">
+                  Submit
+                </button>
+              </div>
+            </div>
+
           </form>
         </div>
       </div>
 
       <div class="col-xs-12 text-center"
-          ng-if="!ctrl.formExpanded">
+           ng-if="!ctrl.formExpanded">
         <button
           class="btn btn-slider white__hover-color white__color--dark green__bg text-uppercase green__hover-bg--semi-dark"
           ng-click="ctrl.formExpanded=true; ctrl.scrollTo('formId')">
@@ -184,12 +216,14 @@
     <div class="row">
       <div class="col-sm-4 col-xs-12 footer__logo">
         <a href="http://ferrazzi.projects-directory.com">
-          <img src="http://ferrazzi.projects-directory.com/wp-content/uploads/2016/05/logo-long.png" alt="Ferrazzi Greenlight" width="181" height="27" class="img-responsive">
+          <img src="http://ferrazzi.projects-directory.com/wp-content/uploads/2016/05/logo-long.png"
+               alt="Ferrazzi Greenlight" width="181" height="27" class="img-responsive">
         </a>
       </div>
       <div class="col-sm-4 col-xs-12 footer__copyrights text-center">
         <div class="footer__copyrights--hide">
-          <p>© 2016 Ferrazzi Greenlight | <a href="http://ferrazzi.projects-directory.com/privacy-policy/">Privacy Policy</a></p>
+          <p>© 2016 Ferrazzi Greenlight | <a href="http://ferrazzi.projects-directory.com/privacy-policy/">Privacy
+            Policy</a></p>
         </div>
       </div>
       <div class="col-sm-4 col-xs-12 footer-copyrights text-right">
