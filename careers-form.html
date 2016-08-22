@@ -83,7 +83,7 @@
              ng-class="{'form__is-expanded': ctrl.formExpanded}"
         >
 
-          <form name="ctrl.careersForm" ng-submit="ctrl.submitForm()">
+          <form name="ctrl.careersForm" ng-submit="ctrl.submitForm()"; novalidate>
 
             <div class="green__color reset margin-bottom-2 padding-top-1 padding-bottom-1">
               <h2>Apply</h2>
@@ -200,10 +200,11 @@
               </div>
             </div>
 
-            <div class="col-md-4 col-sm-4 col-xs-12 text-right position-section__button--submit">
+            <div class="col-md-4 col-sm-4 col-xs-12 text-right position-section__container--submit">
               <div class="row">
                 <button
-                  class="btn btn-slider white__hover-color white__color--dark green__bg green__hover-bg--semi-dark text-uppercase">
+                  ng-class="{'submit-error':ctrl.animationValue}"
+                  class="btn btn-slider white__hover-color white__color--dark green__bg green__hover-bg--semi-dark text-uppercase position-section__button--submit">
                   Submit
                 </button>
               </div>
@@ -217,7 +218,8 @@
            ng-if="!ctrl.formExpanded">
         <button
           class="btn btn-slider white__hover-color white__color--dark green__bg text-uppercase green__hover-bg--semi-dark"
-          ng-click="ctrl.formExpanded=true; ctrl.scrollTo('formId')">
+          ng-click="ctrl.formExpanded=true; ctrl.scrollTo('formId')"
+          >
           Apply
         </button>
       </div>

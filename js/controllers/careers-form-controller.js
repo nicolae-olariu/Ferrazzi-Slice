@@ -20,7 +20,15 @@
     }
 
     function submitForm() {
-      console.log("nasol");
+      if(vm.careersForm.$invalid) {
+        vm.animationValue = true;
+      }
+
+      $timeout(function () {
+        console.log(vm.animationValue);
+        vm.animationValue=false;
+      },1000);
+
       console.log(vm);
     }
 
