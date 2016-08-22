@@ -8,7 +8,7 @@
     .position-section__form {
         overflow: hidden;
         max-height: 0;
-        transition: transform 1s ease,  max-height 1s linear;
+        transition: transform 1s ease;
         transform: scale(0.0);
 
         &.form__is-expanded {

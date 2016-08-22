@@ -166,7 +166,8 @@
         </div>
       </div>
 
-      <div class="col-xs-12 text-center">
+      <div class="col-xs-12 text-center"
+          ng-if="!ctrl.formExpanded">
         <button
           class="btn btn-slider white__hover-color white__color--dark green__bg text-uppercase green__hover-bg--semi-dark"
           ng-click="ctrl.formExpanded=true; ctrl.scrollTo('formId')">

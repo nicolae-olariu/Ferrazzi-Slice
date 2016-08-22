@@ -16,7 +16,7 @@
     function scrollTo(id) {
       $timeout(function(){
         $anchorScroll(id);
-    }, 500);
+    }, 0);
     }
 
     function submitForm() {
