@@ -4,31 +4,46 @@
   angular.module('careers-position')
     .controller('CareersPositionController', CareersPositionController);
 
-  function CareersPositionController($anchorScroll, $timeout, AppEntity, SendEmailCommand) {
+  function CareersPositionController($scope, $anchorScroll, $timeout, AppEntity, SendEmailCommand) {
     var vm = this;
-
     vm.AppEntity = AppEntity;
 
     vm.submitFormHandler = submitFormHandler;
     vm.submitForm = submitForm;
     vm.scrollTo = scrollTo;
+    vm.animationSubmit = animationSubmit;
+    vm.testaoFunc = testaoFunc;
+
+    function testaoFunc(param, type) {
+      if (type === 'cv') {
+        $scope.$apply(function () {
+          debugger
+          vm.cvFile = param[0].name;
+        });
+        return
+      }
+      $scope.$apply(function () {
+        debugger
+        vm.aditionalItems = angular.copy(param);
+      });
+      debugger;
+    }
 
     function scrollTo(id) {
-      $timeout(function(){
+      $timeout(function () {
         $anchorScroll(id);
-    }, 0);
+      }, 0);
+    }
+
+    function animationSubmit() {
+      vm.careersForm.$invalid ? vm.animationValue = true : vm.animationValue = false;
+      $timeout(function () {
+        vm.animationValue = false;
+      }, 1000);
     }
 
     function submitForm() {
-      if(vm.careersForm.$invalid) {
-        vm.animationValue = true;
-      }
-
-      $timeout(function () {
-        console.log(vm.animationValue);
-        vm.animationValue=false;
-      },1000);
-
+      debugger
       console.log(vm);
     }
 
