@@ -4,7 +4,7 @@
   angular.module('careers-position')
     .controller('CareersPositionController', CareersPositionController);
 
-  function CareersPositionController($scope, $anchorScroll, $timeout, AppEntity, SendEmailCommand) {
+  function CareersPositionController($scope, $anchorScroll, $timeout, AppEntity, SendEmailCommand, uploadFileService) {
     var vm = this;
     vm.AppEntity = AppEntity;
     vm.aditionalItems = {};
@@ -23,6 +23,8 @@
           vm.cvFile = param[0].name;
 
         });
+        var uploadUrl = "/fileUpload";
+        // uploadFileService.uploadFileToUrl(param[0], uploadUrl);
         return
       }
       $scope.$apply(function () {
