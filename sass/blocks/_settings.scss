@@ -848,3 +848,15 @@ section .container .newsletter-form form p.message-response {
 		@include transform(translateX(4px));
 	}
 }
+
+.text-ellipsis {
+	p,
+	span {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	span {
+		display: inline-block;
+	}
+}

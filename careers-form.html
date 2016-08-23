@@ -83,7 +83,7 @@
              ng-class="{'form__is-expanded': ctrl.formExpanded}"
         >
 
-          <form name="ctrl.careersForm" ng-submit="ctrl.submitForm()" novalidate>
+          <form name="ctrl.careersForm" ng-submit="ctrl.submitForm()">
 
             <div class="green__color reset margin-bottom-2 padding-top-1 padding-bottom-1">
               <h2>Apply</h2>
@@ -158,13 +158,36 @@
                       rows="10"
                       ng-model="ctrl.coverLetter"
                       required>
-        </textarea>
+            </textarea>
+
+            <div class="col-xs-12">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="row">
+                  <div ng-if="ctrl.cvFile" class="paragraph black__color--dark form__label">
+                    <h5>Cv File</h5>
+                  </div>
+                  <div class="text-ellipsis">
+                    <p>{{ ctrl.cvFile }}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="row">
+                  <div ng-if="ctrl.objectKeys(ctrl.aditionalItems).length" class="paragraph black__color--dark form__label">
+                    <h5>Additional Items</h5>
+                  </div>
+                  <div ng-repeat="aditional in ctrl.aditionalItems" class="text-ellipsis margin-bottom--1">
+                    <p>{{aditional.name}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div class="col-md-8 col-sm-8 col-xs-12">
               <div class="row">
                 <div class="col-md-4 col-sm-5 col-xs-6 padding-right-2 text-center position-section__upload-container">
                   <div class="row">
-                    {{ ctrl.cvFile }}
                     <label for="cv"
                            class="btn btn-slider position-section__button white__hover-color white__color--dark blue__bg--light blue__hover-bg text-uppercase"
                     >Upload Resume</label>
@@ -172,7 +195,7 @@
                       type="file"
                       name="cv"
                       id="cv"
-                      onchange="angular.element(this).scope().ctrl.testaoFunc(this.files, 'cv')"
+                      onchange="angular.element(this).scope().ctrl.uploadFile(this.files, 'cv')"
                       accept="application/msword, application/pdf,"
                       style="display: none">
                     <label for="cv"
@@ -182,10 +205,8 @@
                 </div>
 
                 <div class="col-md-4 col-sm-5 col-xs-6 text-center position-section__upload-container">
+
                   <div class="row">
-                    <span ng-repeat="aditional in ctrl.aditionalItems">
-                      {{aditional.name}}
-                    </span>
                     <label for="aditional"
                            class="btn btn-slider position-section__button white__hover-color white__color--dark blue__bg--light blue__hover-bg text-uppercase position-section__button--tight"
                     >Upload Additional <br> Documents</label>
@@ -193,8 +214,8 @@
                       type="file"
                       name="aditional"
                       id="aditional"
-                      onchange="angular.element(this).scope().ctrl.testaoFunc(this.files, 'additional')"
-                      ng-model="additionalFiles"
+                      onchange="angular.element(this).scope().ctrl.uploadFile(this.files, 'additional')"
+                      ng-model="ctrl.additionalFiles"
                       accept="application/msword, application/pdf,"
                       multiple
                       style="display: none">
@@ -202,6 +223,7 @@
                            class="info-label padding-left-2"
                     >Must be less than 2MB doc or pdf format only</label>
                   </div>
+
                 </div>
 
               </div>
@@ -227,7 +249,7 @@
         <button
           class="btn btn-slider white__hover-color white__color--dark green__bg text-uppercase green__hover-bg--semi-dark"
           ng-click="ctrl.formExpanded=true; ctrl.scrollTo('formId')"
-          >
+        >
           Apply
         </button>
       </div>

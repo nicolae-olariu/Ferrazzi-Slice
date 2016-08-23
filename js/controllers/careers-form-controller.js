@@ -7,26 +7,27 @@
   function CareersPositionController($scope, $anchorScroll, $timeout, AppEntity, SendEmailCommand) {
     var vm = this;
     vm.AppEntity = AppEntity;
+    vm.aditionalItems = {};
+    vm.objectKeys = Object.keys;
 
     vm.submitFormHandler = submitFormHandler;
     vm.submitForm = submitForm;
     vm.scrollTo = scrollTo;
     vm.animationSubmit = animationSubmit;
-    vm.testaoFunc = testaoFunc;
+    vm.uploadFile = uploadFile;
 
-    function testaoFunc(param, type) {
+
+    function uploadFile(param, type) {
       if (type === 'cv') {
         $scope.$apply(function () {
-          debugger
           vm.cvFile = param[0].name;
+
         });
         return
       }
       $scope.$apply(function () {
-        debugger
-        vm.aditionalItems = angular.copy(param);
+        angular.extend(vm.aditionalItems, param);
       });
-      debugger;
     }
 
     function scrollTo(id) {
@@ -43,7 +44,6 @@
     }
 
     function submitForm() {
-      debugger
       console.log(vm);
     }
 
