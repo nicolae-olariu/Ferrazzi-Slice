@@ -805,6 +805,20 @@ section .container .newsletter-form form p.message-response {
 		&--active {
 			background-color: palette(black, light);
 		}
+
+		&--smaller {
+			padding: .2rem 1.8rem;
+			font-size: 1.3rem;
+			margin: 0 .1rem .5rem 0;
+
+		}
+
+	}
+	&__hover--grey {
+		&:hover {
+			background-color: palette(grey, lighter);
+			color: palette(grey, base);
+		}
 	}
 }
 
