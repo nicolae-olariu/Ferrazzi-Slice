@@ -4,7 +4,7 @@
         line-height: 3rem;
     }
 
-    &__side{
+    &__side {
         padding: 0 2.5rem 0 2rem;
     }
 
@@ -14,5 +14,23 @@
         }
     }
 
+    &__image-container {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__about {
+        h5 {
+            font-size: 1.7rem;
+        }
+        h6,
+        p {
+            font-size: 1.4rem;
+        }
+    }
 
 }
