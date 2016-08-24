@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meet The Team</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<section class="individual-details">
+  <div class="container">
+    <div>
+      <div class="black__color--dark">
+        <h1>Meet Keith</h1>
+      </div>
+
+      <div class="col-md-5 col-ms-5 col-xs-5">
+        <div>
+          <img src="img/team_person.png" alt="Person">
+        </div>
+
+        <div>
+          <button class="btn btn-slider white__hover-color white__color--dark green__bg green__hover-bg--semi-dark
+						upper">Request Keith
+          </button>
+        </div>
+
+      </div>
+
+      <div class="col-md-7 col-ms-7 col-xs-7">
+        <div class="black__color--dark">
+          <h2>Employee Name</h2>
+        </div>
+        <div class="black__color--dark font__bold ">
+          <h3>Job Title</h3>
+        </div>
+        <!-- quote -->
+        <div class="testimonial-single page-quote margin-left--2 margin-right--1">
+          <div class="quote-symbol">“</div>
+          <div class="green__color paragraph padding-top-1 font__bold quote-content">
+            <h4>I am a note worthy pull quote about how FG research discussed on this page.</h4>
+          </div>
+          <div class="quote-symbol quote-close">“</div>
+        </div>
+
+        <div class="black__color--dark paragraph">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis vulputate tortor. Duis a vehicula
+            nibh. </p>
+        </div>
+
+        <div class="content-blocks__text paragraph black__color--dark padding-top-1 padding-bottom-1">
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Phasellus vestibulum, lectus quis congue fermentum, dui odio sodales.</li>
+            <li>In quis vulputate tortor. Duis a vehicula nibh.</li>
+          </ul>
+        </div>
+
+        <div class="black__color--dark paragraph">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis vulputate tortor. Duis a vehicula
+            nibh. </p>
+        </div>
+
+        <div class="black__color--dark font__bold ">
+          <h3>Keith's Bio</h3>
+        </div>
+
+        <div class="black__color--dark paragraph">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis vulputate tortor. Duis a vehicula
+            nibh. </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</body>
+</html>
