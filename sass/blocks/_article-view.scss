@@ -10,11 +10,21 @@
 
     &__side {
         padding: 0 2.5rem 0 2rem;
+
+        @include respondTo(notdesktop) {
+            padding: 0 1.5rem 0 1rem;
+        }
     }
 
     &__ul {
+        @include respondTo(notdesktop) {
+            font-size: 1.4rem;
+        }
         ul {
             padding-left: 3rem;
+            @include respondTo(notdesktop) {
+                padding-left: 2.5rem;
+            }
         }
     }
 
@@ -35,7 +45,12 @@
         h6,
         p {
             font-size: 1.4rem;
+            @include respondTo(notdesktop) {
+                font-size: 1.3rem;
+                line-height: 1.5rem;
+            }
         }
+
     }
 
 }
