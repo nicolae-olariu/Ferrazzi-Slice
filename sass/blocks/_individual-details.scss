@@ -8,4 +8,13 @@
         font-size: 8rem;
     }
 
+    .slick-arrow {
+        &.slick-next {
+            right: 0;
+        }
+        &:before {
+            color: black;
+        }
+    }
+
 }

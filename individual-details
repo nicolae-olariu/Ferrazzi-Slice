@@ -7,9 +7,20 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/loader.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="js/angular.js"></script>
+  <script src="bower_components/slick-carousel/slick/slick.js"></script>
+  <script src="bower_components/angular-slick-carousel/dist/angular-slick.min.js"></script>
+  <script src="js/angular-ui-router.js"></script>
+  <script src="js/resource.js"></script>
+  <script src="js/mask.js"></script>
+  <script src="js/careers-position.js"></script>
+  <script src="js/controllers/individual-details-controller.js"></script>
 </head>
-<body>
-<section class="individual-details">
+<body ng-app="careers-position">
+<section class="individual-details" ng-controller="IndividualDetailsController as ctrl">
   <div class="container">
     <div>
       <div class="black__color--dark">
@@ -25,6 +36,25 @@
           <button class="btn btn-slider white__hover-color white__color--dark green__bg green__hover-bg--semi-dark
 						upper">Request Keith
           </button>
+        </div>
+
+        <div class="black__color--dark">
+          <h4>Books</h4>
+        </div>
+
+        <div>
+          <slick infinite=true slides-to-show=2 slides-to-scroll=1  arrows="true" settings="ctrl.slickConfig">
+            <div
+              ng-repeat="book in ctrl.books"
+              class="col-md-6 col-sm-6 col-xs-6">
+              <div>
+                <img src="{{book.image}}.png" alt="book1">
+              </div>
+              <div class="black__color--dark paragraph">
+                <p>{{book.title}}</p>
+              </div>
+            </div>
+          </slick>
         </div>
 
       </div>
