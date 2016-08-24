@@ -1,6 +1,10 @@
 .article-view {
-    h1 {
+    h1,
+    h2 {
         margin-top: 0;
+        margin-bottom: 0;
+    }
+    h1 {
         line-height: 3rem;
     }
 
@@ -24,6 +28,7 @@
     }
 
     &__about {
+        margin-left: -5px;
         h5 {
             font-size: 1.7rem;
         }
