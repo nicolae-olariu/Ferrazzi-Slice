@@ -588,6 +588,11 @@ section .container .newsletter-form form p.message-response {
 	&__justfify-end {
 		justify-content: flex-end;
 	}
+
+	&__justfify-space-around {
+		justify-content: space-around;
+
+	}
 	
 	&__justfify-space-between {
 		justify-content: space-between;

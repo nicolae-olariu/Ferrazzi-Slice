@@ -1,0 +1,80 @@
+.expertise-square {
+    a {
+        display: block;
+    }
+    &__container {
+        width: 82%;
+        margin: 0 auto;
+    }
+
+    &__shape-container {
+        position: relative;
+        width: 16.5rem;
+        height: 16.5rem;
+        padding: 0.5rem;
+        background-color: palette(blue, light);
+        @include border-radius-separate(25px, 25px, 0, 25px);
+        @include transition(background-color 1s ease);
+
+        &:hover {
+            background-color: palette(green, light);
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            width: 100%;
+            height: .4rem;
+            background-color: palette(grey);
+            position: absolute;
+            top: 50%;
+            margin-top: -.2rem;
+            cursor: default;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        &.connect-right {
+            &:after {
+                left: 100%;
+                width: 200%;
+            }
+
+            &--bottom {
+                &:before {
+                    transform: rotate(-50deg);
+                    width: 29rem;
+                    left: 1rem;
+                    top:-2rem;
+                }
+            }
+        }
+
+        &.connect-left {
+            &:before {
+                right: 100%;
+                width: 200%;
+            }
+            &--bottom {
+                &:after {
+                    transform: rotate(50deg);
+                    width: 27rem;
+                    left: 1rem;
+                    top:16rem;
+                }
+            }
+        }
+
+
+    }
+
+    &__content {
+        width: 100%;
+        height: 100%;
+        border: 1px solid palette(white, base);
+        @include border-radius-separate(20px, 20px, 0, 20px);
+        background-size: cover;
+        background: no-repeat center center;
+    }
+
+}
