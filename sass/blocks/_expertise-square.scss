@@ -164,8 +164,6 @@
             }
         }
 
-
-
         &.right-arrow {
             left: -13rem;
             &:before {
@@ -196,15 +194,14 @@
             @include fall-font(NewsGothicMT Bold);
         }
 
-
-
         @include respondTo(phone) {
             position: static;
             display: block;
             width: 100%;
             min-height: initial;
             pointer-events: auto;
-            margin-top: 2rem;
+            margin: 2rem 0;
+
 
             &:before {
                 content: none;
@@ -216,6 +213,12 @@
 
     .flex__justfify-space-between > div {
         padding: 0;
+    }
+
+    @include respondTo(phone) {
+        .flex__justfify-space-around > div {
+            padding: 0;
+        }
     }
 
 }
