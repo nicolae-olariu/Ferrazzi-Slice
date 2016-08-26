@@ -14,7 +14,6 @@
     .test {
         position: relative;
 
-
     }
 
     .test2 {
@@ -63,7 +62,7 @@
                     transform: rotate(50deg);
                     width: 29rem;
                     left: 1rem;
-                    top:22rem;
+                    top: 22rem;
                 }
             }
         }
@@ -83,8 +82,28 @@
             }
         }
 
+        @include respondTo(tablet) {
+            &.connect-right {
+                &--bottom {
+                    &:after {
+                        left: 3rem;
+                    }
+                }
+            }
+
+            &.connect-left {
+                &--bottom {
+                    &:before {
+                        width: 25rem;
+                        left: -11rem;
+                        top: 13rem;
+                    }
+                }
+            }
+        }
+
         @include respondTo(phone) {
-            padding: 0;
+            margin: 0;
             &:before,
             &:after {
                 content: none;
@@ -96,17 +115,18 @@
         position: relative;
         width: 16.5rem;
         height: 16.5rem;
-        padding: 0.5rem;
         background-color: palette(blue, light);
         @include border-radius-separate(25px, 25px, 0, 25px);
-        @include transition(background-color 1s ease);
         z-index: 12;
 
-        &:hover {
-            background-color: palette(green, light);
+        img {
+            width: 100%;
         }
 
-
+        @include respondTo(tablet) {
+            width: 12rem;
+            height: 12rem;
+        }
 
     }
 
@@ -119,7 +139,7 @@
         background: no-repeat center center;
     }
 
-    .pop-up-text{
+    .pop-up-text {
         position: absolute;
         width: 30rem;
         padding: 2.2rem;
@@ -128,13 +148,10 @@
         display: none;
         pointer-events: none;
         min-height: 13.5rem;
-
-        //@include transform(translate(50%, -30%));
         top: -14rem;
         left: 4rem;
 
-
-        &:before{
+        &:before {
             content: "";
             position: absolute;
             top: 100%;
@@ -144,22 +161,21 @@
             border-width: 3rem 1.7rem 0 1.7rem;
             border-color: transparentize(palette(green, light), 0.1) transparent transparent transparent;
         }
-        &.left-arrow{
-            &:before{
+        &.left-arrow {
+            &:before {
                 left: 3.5rem;
             }
         }
 
-        &.right-arrow{
-            left:-13rem;
-            &:before{
+        &.right-arrow {
+            left: -13rem;
+            &:before {
                 right: 3.5rem;
             }
         }
 
-
         @include border-radius(2rem);
-        &__content{
+        &__content {
             font-size: 1.3rem;
             letter-spacing: -0.02em;
             line-height: 1.5rem;
@@ -168,6 +184,8 @@
 
             @include fall-font(NewsGothicMT Bold);
         }
+
+
 
         @include respondTo(phone) {
             position: static;
@@ -180,7 +198,13 @@
             &:before {
                 content: none;
             }
+
+
         }
+    }
+
+    .flex__justfify-space-between > div {
+        padding: 0;
     }
 
 }
