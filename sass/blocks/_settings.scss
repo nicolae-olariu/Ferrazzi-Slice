@@ -592,6 +592,14 @@ section .container .newsletter-form form p.message-response {
 	&__justfify-space-around {
 		justify-content: space-around;
 
+		@include respondTo(phone){
+		flex-wrap: wrap;
+		> div{
+			width: 100%;
+			padding: 1rem 0;
+		}
+	}
+
 	}
 	
 	&__justfify-space-between {

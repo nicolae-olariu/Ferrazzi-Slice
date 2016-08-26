@@ -5,6 +5,10 @@
     &__container {
         width: 71%;
         margin: 0 auto;
+
+        @include respondTo(phone) {
+            width: 100%;
+        }
     }
 
     .test {
@@ -17,6 +21,11 @@
         &:hover + .pop-up-text {
             display: block;
         }
+
+        @include respondTo(phone) {
+            padding: 0;
+        }
+
     }
 
     &__link-container {
@@ -73,6 +82,14 @@
                 }
             }
         }
+
+        @include respondTo(phone) {
+            padding: 0;
+            &:before,
+            &:after {
+                content: none;
+            }
+        }
     }
 
     &__shape-container {
@@ -104,7 +121,6 @@
 
     .pop-up-text{
         position: absolute;
-        overflow: visible;
         width: 30rem;
         padding: 2.2rem;
         background-color: transparentize(palette(green, light), 0.1);
@@ -116,6 +132,7 @@
         //@include transform(translate(50%, -30%));
         top: -14rem;
         left: 4rem;
+
 
         &:before{
             content: "";
@@ -150,6 +167,19 @@
             text-align: center;
 
             @include fall-font(NewsGothicMT Bold);
+        }
+
+        @include respondTo(phone) {
+            position: static;
+            display: block;
+            width: 100%;
+            min-height: initial;
+            pointer-events: auto;
+            margin-top: 2rem;
+
+            &:before {
+                content: none;
+            }
         }
     }
 
