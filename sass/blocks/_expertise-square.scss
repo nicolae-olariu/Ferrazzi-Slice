@@ -137,26 +137,30 @@
 
     .pop-up-text {
         position: absolute;
+        display: block;
         width: 30rem;
         padding: 2.2rem;
         background-color: transparentize(palette(green, light), 0.1);
         z-index: 100;
-        display: none;
         pointer-events: none;
         min-height: 13.5rem;
         top: -14rem;
-        left: 4rem;
+        right: 0;
 
         &:before {
             content: "";
             position: absolute;
             top: 100%;
+            left: 44%;
             width: 0;
             height: 0;
             border-style: solid;
             border-width: 3rem 1.7rem 0 1.7rem;
             border-color: transparentize(palette(green, light), 0.1) transparent transparent transparent;
         }
+
+
+
         &.left-arrow {
             &:before {
                 left: 3.5rem;
@@ -164,22 +168,21 @@
         }
 
         &.right-arrow {
-            left: -13rem;
+            left: 0;
             &:before {
                 right: 3.5rem;
             }
         }
 
-        &.middle-arrow {
-            &.first {
-                &:before {
-                    left: 50%;
-                    @include respondTo(tablet) {
-                        left: 35%;
-                    }
-                }
-            }
-        }
+        //&.middle-arrow {
+        //    &.first {
+        //        &:before {
+        //            @include respondTo(tablet) {
+        //                left: 35%;
+        //            }
+        //        }
+        //    }
+        //}
 
         @include border-radius(2rem);
         &__content {
