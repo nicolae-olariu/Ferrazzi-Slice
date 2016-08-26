@@ -3,32 +3,19 @@
         display: block;
     }
     &__container {
-        width: 82%;
+        width: 71%;
         margin: 0 auto;
     }
 
-    &__shape-container {
+    &__link-container {
         position: relative;
-        width: 16.5rem;
-        height: 16.5rem;
-        padding: 0.5rem;
-        background-color: palette(blue, light);
-        @include border-radius-separate(25px, 25px, 0, 25px);
-        @include transition(background-color 1s ease);
-
-        &:hover {
-            background-color: palette(green, light);
-        }
-
-        &:hover + .pop-up-text {
-            display: block;
-        }
+        display: inline-block;
 
         &:before,
         &:after {
             content: "";
             width: 100%;
-            height: .4rem;
+            height: .5rem;
             background-color: palette(grey);
             position: absolute;
             top: 50%;
@@ -68,7 +55,25 @@
                 }
             }
         }
+    }
 
+    &__shape-container {
+        position: relative;
+        width: 16.5rem;
+        height: 16.5rem;
+        padding: 0.5rem;
+        background-color: palette(blue, light);
+        @include border-radius-separate(25px, 25px, 0, 25px);
+        @include transition(background-color 1s ease);
+        z-index: 12;
+
+        &:hover {
+            background-color: palette(green, light);
+        }
+
+        &:hover + .pop-up-text {
+           // display: block;
+        }
 
     }
 
@@ -84,14 +89,16 @@
     .pop-up-text{
         position: absolute;
         width: 30rem;
-        padding: 3rem;
+        padding: 2.2rem;
         background-color: transparentize(palette(green, light), 0.1);
         z-index: 100;
         display: none;
         pointer-events: none;
         min-height: 13.5rem;
 
-        @include transform(translate(50%, -30%));
+        //@include transform(translate(50%, -30%));
+        top: -14rem;
+        left: 4rem;
 
         &:before{
             content: "";
@@ -110,6 +117,7 @@
         }
 
         &.right-arrow{
+            left:-13rem;
             &:before{
                 right: 3.5rem;
             }
