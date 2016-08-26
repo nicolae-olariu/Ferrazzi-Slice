@@ -37,6 +37,12 @@
             pointer-events: none;
         }
 
+        &.no-after {
+            &:after {
+                content: none;
+            }
+        }
+
         &.connect-right {
             &:after {
                 left: 100%;
@@ -44,11 +50,11 @@
             }
 
             &--bottom {
-                &:before {
-                    transform: rotate(-50deg);
+                &:after {
+                    transform: rotate(50deg);
                     width: 29rem;
                     left: 1rem;
-                    top:-2rem;
+                    top:22rem;
                 }
             }
         }
@@ -59,11 +65,11 @@
                 width: 200%;
             }
             &--bottom {
-                &:after {
-                    transform: rotate(50deg);
-                    width: 27rem;
-                    left: 1rem;
-                    top:16rem;
+                &:before {
+                    transform: rotate(-50deg);
+                    width: 25rem;
+                    left: -7rem;
+                    top: 22rem;
                 }
             }
         }
