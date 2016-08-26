@@ -173,8 +173,7 @@
 
         &.middle-arrow {
             &.first {
-                &:before
-                {
+                &:before {
                     left: 50%;
                     @include respondTo(tablet) {
                         left: 35%;
@@ -202,11 +201,9 @@
             pointer-events: auto;
             margin: 2rem 0;
 
-
             &:before {
                 content: none;
             }
-
 
         }
     }
