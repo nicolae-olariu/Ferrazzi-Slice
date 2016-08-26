@@ -11,12 +11,7 @@
         }
     }
 
-    .test {
-        position: relative;
-
-    }
-
-    .test2 {
+    &__outside {
         &:hover + .pop-up-text {
             display: block;
         }
@@ -60,9 +55,9 @@
             &--bottom {
                 &:after {
                     transform: rotate(50deg);
-                    width: 29rem;
-                    left: 1rem;
-                    top: 22rem;
+                    width: 38rem;
+                    left: 3rem;
+                    top: 27rem;
                 }
             }
         }
@@ -76,8 +71,8 @@
                 &:before {
                     transform: rotate(-50deg);
                     width: 25rem;
-                    left: -7rem;
-                    top: 22rem;
+                    left: -13rem;
+                    top: 21rem;
                 }
             }
         }
@@ -86,7 +81,9 @@
             &.connect-right {
                 &--bottom {
                     &:after {
-                        left: 3rem;
+                        width: 33rem;
+                        left: 2rem;
+                        top: 23rem;
                     }
                 }
             }
