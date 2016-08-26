@@ -164,10 +164,24 @@
             }
         }
 
+
+
         &.right-arrow {
             left: -13rem;
             &:before {
                 right: 3.5rem;
+            }
+        }
+
+        &.middle-arrow {
+            &.first {
+                &:before
+                {
+                    left: 50%;
+                    @include respondTo(tablet) {
+                        left: 35%;
+                    }
+                }
             }
         }
 
