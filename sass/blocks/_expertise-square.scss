@@ -7,6 +7,18 @@
         margin: 0 auto;
     }
 
+    .test {
+        position: relative;
+
+
+    }
+
+    .test2 {
+        &:hover + .pop-up-text {
+            display: block;
+        }
+    }
+
     &__link-container {
         position: relative;
         display: inline-block;
@@ -71,9 +83,7 @@
             background-color: palette(green, light);
         }
 
-        &:hover + .pop-up-text {
-           // display: block;
-        }
+
 
     }
 
@@ -88,6 +98,7 @@
 
     .pop-up-text{
         position: absolute;
+        overflow: visible;
         width: 30rem;
         padding: 2.2rem;
         background-color: transparentize(palette(green, light), 0.1);
