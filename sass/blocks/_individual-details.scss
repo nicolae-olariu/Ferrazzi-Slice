@@ -1,6 +1,6 @@
 .individual-details {
     .page-quote {
-        background-color: palette(white, base);
+        background-color: transparent;
     }
 
     .quote-symbol {
@@ -14,6 +14,26 @@
         }
         &:before {
             color: black;
+        }
+    }
+
+    &__image-holder {
+        width: 100%;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .testimonial-single {
+        padding: 0 0 1.5rem 0.3rem;
+    }
+
+    .header-content__share--simple {
+        .header-share__item {
+            &:first-child {
+                margin-left: 0;
+            }
         }
     }
 
