@@ -109,4 +109,21 @@
         }
     }
 
+    .content-blocks__video {
+        width: 28.4rem;
+        height: 14.8rem;
+        margin: 7rem auto 0;
+        &.video-block {
+            &:before {
+                width: 5rem;
+                height: 5rem;
+            }
+            &:after {
+                width: 4rem;
+                height: 4rem;
+                font-size: 2rem;
+            }
+        }
+    }
+
 }

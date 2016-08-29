@@ -15,7 +15,9 @@
 <body>
 <section class="individual-details">
   <div class="container">
-    <div>
+
+    <!-- slider person -->
+    <div class="col-xs-12">
       <div class="black__color--dark individual-details__title">
         <h1>Meet Keith</h1>
       </div>
@@ -111,6 +113,129 @@
                 </div>
               </div>
             </div>
+          </div>
+
+        </div>
+
+        <!--right side-->
+
+        <div class="col-md-7 col-sm-7 col-xs-12 padding-left-2">
+          <div class="hide-mobile">
+            <div class="margin-top--2 black__color--dark">
+              <h2>Employee Name</h2>
+            </div>
+            <div class="margin-top--1 black__color--dark font__bold ">
+              <h3>Job Title</h3>
+            </div>
+          </div>
+          <!-- quote -->
+          <div class="testimonial-single page-quote margin-left--2 margin-right--1 margin-top--2 quote-container">
+            <div class="quote-symbol">“</div>
+            <div class="green__color paragraph padding-top-1 font__bold quote-content">
+              <h4>I am a note worthy pull quote about how FG research discussed on this page.</h4>
+            </div>
+            <div class="quote-symbol quote-close">“</div>
+          </div>
+
+          <div class="black__color--dark paragraph">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis vulputate tortor. Duis a vehicula
+              nibh. </p>
+          </div>
+
+          <div class="content-blocks__text paragraph black__color--dark padding-top-1 padding-bottom-1">
+            <ul>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li>Phasellus vestibulum, lectus quis congue fermentum, dui odio sodales.</li>
+              <li>In quis vulputate tortor. Duis a vehicula nibh.</li>
+            </ul>
+          </div>
+
+          <div class="black__color--dark paragraph">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis vulputate tortor. Duis a vehicula
+              nibh. </p>
+          </div>
+
+          <div class="margin-top-3 black__color--dark font__bold ">
+            <h3>Keith's Bio</h3>
+          </div>
+
+          <div class="black__color--dark paragraph">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis vulputate tortor. Duis a vehicula
+              nibh. </p>
+          </div>
+
+          <!-- social -->
+          <div class="margin-top-3">
+            <div class="black__color--dark font__bold ">
+              <h3>Get in touch</h3>
+            </div>
+            <div class="">
+              <div class="header-content__share--simple">
+                <ul class="list-unstyled header-share">
+                  <li class="header-share__item">
+                    <a href="javascript:;" data-share-twitter="">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="header-share__item">
+                    <a href="javascript:;" data-share-facebook="">
+                      <i class="fa fa-facebook-square"></i>
+                    </a>
+                  </li>
+                  <li class="header-share__item">
+                    <a href="javascript:;" data-share-linkedin="">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li class="header-share__item">
+                    <a
+                      href="mailto:?subject=Lorem%20Ipsum%20Dolar%20Elit&amp;body=http%3A%2F%2Fferrazzi.projects-directory.com%2Fsolutions%2Fthe-fg-way%2F"
+                      data-share-email="">
+                      <i class="fa fa-envelope"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- video person -->
+    <div class="col-xs-12">
+      <div class="black__color--dark individual-details__title">
+        <h1>Meet Keith</h1>
+      </div>
+
+      <div class="padding-top-2">
+
+        <div class="col-md-5 col-sm-5 col-xs-12">
+          <div class="row">
+
+            <div class="hide-desktop margin-top--5">
+              <div class="margin-top--2 black__color--dark">
+                <h2>Employee Name</h2>
+              </div>
+              <div class="margin-top--1 black__color--dark font__bold ">
+                <h3>Job Title</h3>
+              </div>
+            </div>
+
+            <div class="individual-details__image-holder">
+              <img src="img/team_person.png" alt="Person">
+            </div>
+
+            <div class="margin-top--2 text-center">
+              <button class="btn btn-slider white__hover-color white__color--dark green__bg green__hover-bg--semi-dark
+						upper">Request Keith
+              </button>
+            </div>
+            <!--video-->
+              <div class="content-blocks__video video-block object-fit" data-youtube-id="j6VuXMj2OuY">
+                <img src="http://ferrazzi.projects-directory.com/wp-content/uploads/2016/05/speaking-image.png"
+                     width="2592" height="1728">
+              </div>
           </div>
 
         </div>
