@@ -30,8 +30,6 @@
 
     .book-slider {
         visibility: hidden;
-        max-width: 80%;
-        margin: 0 auto;
         &.slick-initialized {
             visibility: visible;
         }
@@ -57,6 +55,8 @@
             }
         }
         &__title {
+            max-width: 80%;
+            margin: 0 auto;
             h5 {
                 font-size: 1.7rem;
             }
