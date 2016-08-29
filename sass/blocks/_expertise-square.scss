@@ -146,6 +146,8 @@
         min-height: 13.5rem;
         top: -14rem;
         right: 0;
+        @include border-radius(2rem);
+
 
         &:before {
             content: "";
@@ -159,40 +161,33 @@
             border-color: transparentize(palette(green, light), 0.1) transparent transparent transparent;
         }
 
-
-
-        &.left-arrow {
-            &:before {
-                left: 3.5rem;
-            }
-        }
-
-        &.right-arrow {
+        &.right-side {
             left: 0;
             &:before {
                 right: 3.5rem;
             }
         }
 
-        //&.middle-arrow {
-        //    &.first {
-        //        &:before {
-        //            @include respondTo(tablet) {
-        //                left: 35%;
-        //            }
-        //        }
-        //    }
-        //}
+        &.middle-side {
+            left: -16%;
+            @include respondTo(tablet) {
+                left: -22%;
+            }
+        }
 
-        @include border-radius(2rem);
         &__content {
+            @include fall-font(NewsGothicMT Bold);
             font-size: 1.3rem;
             letter-spacing: -0.02em;
             line-height: 1.5rem;
             color: palette(white, dark);
             text-align: center;
+        }
 
-            @include fall-font(NewsGothicMT Bold);
+        @include respondTo(tablet) {
+            width: 24rem;
+            padding: 1rem;
+            min-height: 12rem;
         }
 
         @include respondTo(phone) {
@@ -212,6 +207,25 @@
     .flex__justfify-space-between > div {
         padding: 0;
     }
+
+    .flex__justfify-space-around {
+        .pop-up-text {
+            &.left-side {
+                right: -2rem;
+                @include respondTo(tablet) {
+
+                }
+            }
+
+            &.right-side {
+                left: -2rem;
+                @include respondTo(tablet) {
+                    left: -3.5rem;
+                }
+            }
+        }
+    }
+
 
     @include respondTo(phone) {
         .flex__justfify-space-around > div {
