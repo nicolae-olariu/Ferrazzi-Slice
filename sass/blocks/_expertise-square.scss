@@ -137,7 +137,7 @@
 
     .pop-up-text {
         position: absolute;
-        display: block;
+        display: none;
         width: 30rem;
         padding: 2.2rem;
         background-color: transparentize(palette(green, light), 0.1);
@@ -222,6 +222,20 @@
                 @include respondTo(tablet) {
                     left: -3.5rem;
                 }
+            }
+        }
+    }
+
+    .flex__justfify-space-between {
+        .pop-up-text {
+            &.left-side {
+                right: -1rem;
+                @include respondTo(tablet) {
+                    right: -0.3rem;
+                }
+            }
+            &.right-side {
+                left: -0.7rem;
             }
         }
     }
