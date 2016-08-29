@@ -16,14 +16,24 @@
 <section class="individual-details">
   <div class="container">
     <div>
-      <div class="black__color--dark">
+      <div class="black__color--dark individual-details__title">
         <h1>Meet Keith</h1>
       </div>
 
       <div class="padding-top-2">
 
-        <div class="col-md-5 col-ms-5 col-xs-5">
+        <div class="col-md-5 col-sm-5 col-xs-12">
           <div class="row">
+
+            <div class="hide-desktop margin-top--5">
+              <div class="margin-top--2 black__color--dark">
+                <h2>Employee Name</h2>
+              </div>
+              <div class="margin-top--1 black__color--dark font__bold ">
+                <h3>Job Title</h3>
+              </div>
+            </div>
+
             <div class="individual-details__image-holder">
               <img src="img/team_person.png" alt="Person">
             </div>
@@ -107,15 +117,17 @@
 
         <!--right side-->
 
-        <div class="col-md-7 col-ms-7 col-xs-7 padding-left-2">
-          <div class="margin-top--2 black__color--dark">
-            <h2>Employee Name</h2>
-          </div>
-          <div class="margin-top--1 black__color--dark font__bold ">
-            <h3>Job Title</h3>
+        <div class="col-md-7 col-sm-7 col-xs-12 padding-left-2">
+          <div class="hide-mobile">
+            <div class="margin-top--2 black__color--dark">
+              <h2>Employee Name</h2>
+            </div>
+            <div class="margin-top--1 black__color--dark font__bold ">
+              <h3>Job Title</h3>
+            </div>
           </div>
           <!-- quote -->
-          <div class="testimonial-single page-quote margin-left--2 margin-right--1 margin-top--2">
+          <div class="testimonial-single page-quote margin-left--2 margin-right--1 margin-top--2 quote-container">
             <div class="quote-symbol">“</div>
             <div class="green__color paragraph padding-top-1 font__bold quote-content">
               <h4>I am a note worthy pull quote about how FG research discussed on this page.</h4>

@@ -3,9 +3,28 @@
         background-color: transparent;
     }
 
+    &__title {
+        @include respondTo(phone) {
+            text-align: center;
+        }
+    }
+
+    .testimonial-single {
+        padding: 0 0 1.5rem 0.3rem;
+        @include respondTo(notdesktop) {
+            margin-left: 0;
+            .quote-content {
+                width: 100%;
+            }
+        }
+    }
+
     .quote-symbol {
         color: palette(black, dark);
         font-size: 8rem;
+        @include respondTo(notdesktop) {
+            display: none;
+        }
     }
 
     &__image-holder {
@@ -14,10 +33,13 @@
             width: 100%;
             height: auto;
         }
-    }
-
-    .testimonial-single {
-        padding: 0 0 1.5rem 0.3rem;
+        @include respondTo(phone) {
+            width: 32rem;
+            margin: 0 auto;
+        }
+        @include respondTo(smallPhone) {
+            width: 100%;
+        }
     }
 
     .header-content__share--simple {
@@ -60,6 +82,30 @@
             h5 {
                 font-size: 1.7rem;
             }
+        }
+    }
+
+    .btn-slider {
+        margin-top: 3.7rem;
+        @include respondTo(phone) {
+            margin-top: 2rem;
+        }
+    }
+
+    .hide-desktop {
+        margin-top: -3rem;
+        text-align: center;
+        h3 {
+            margin-top: 0;
+        }
+        @include respondTo(minTablet) {
+            display: none;
+        }
+    }
+
+    .hide-mobile {
+        @include respondTo(phone) {
+            display: none;
         }
     }
 
