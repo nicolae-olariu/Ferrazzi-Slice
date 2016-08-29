@@ -8,14 +8,7 @@
         font-size: 8rem;
     }
 
-    .slick-arrow {
-        &.slick-next {
-            right: 0;
-        }
-        &:before {
-            color: black;
-        }
-    }
+
 
     &__image-holder {
         width: 100%;
@@ -35,6 +28,34 @@
                 margin-left: 0;
             }
         }
+    }
+
+    .book-slider {
+        visibility: hidden;
+        &.slick-initialized {
+            visibility: visible;
+        }
+        &__image {
+            width: 10.5rem;
+            height: 16rem;
+            margin: 0 auto;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .slick-arrow {
+            &.slick-next {
+                right: 0;
+            }
+            &:before {
+                color: black;
+            }
+        }
+    }
+
+    .test {
+        display: inline;
     }
 
 }

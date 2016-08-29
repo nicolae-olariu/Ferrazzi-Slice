@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
 
 </head>
-<body ng-app="careers-position">
-<section class="individual-details" ng-controller="IndividualDetailsController as ctrl">
+<body>
+<section class="individual-details">
   <div class="container">
     <div>
       <div class="black__color--dark">
@@ -41,8 +41,8 @@
             <div class="book-slider">
               <!-- single book -->
               <div>
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                  <div>
+                <div class="text-center test">
+                  <div class="book-slider__image">
                     <img src="img/book_1.png" alt="book1">
                   </div>
                   <div class="black__color--dark paragraph">
@@ -51,8 +51,8 @@
                 </div>
               </div>
               <div>
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                  <div>
+                <div class="text-center test">
+                  <div class="book-slider__image">
                     <img src="img/book_2.png" alt="book1">
                   </div>
                   <div class="black__color--dark paragraph">
@@ -61,8 +61,8 @@
                 </div>
               </div>
               <div>
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                  <div>
+                <div class="text-center test">
+                  <div class="book-slider__image">
                     <img src="img/book_2.png" alt="book1">
                   </div>
                   <div class="black__color--dark paragraph">
@@ -71,8 +71,8 @@
                 </div>
               </div>
               <div>
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                  <div>
+                <div class="text-center test">
+                  <div class="book-slider__image">
                     <img src="img/book_1.png" alt="book1">
                   </div>
                   <div class="black__color--dark paragraph">
@@ -81,8 +81,8 @@
                 </div>
               </div>
               <div>
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                  <div>
+                <div class="text-center test">
+                  <div class="book-slider__image">
                     <img src="img/book_2.png" alt="book1">
                   </div>
                   <div class="black__color--dark paragraph">
@@ -91,8 +91,8 @@
                 </div>
               </div>
               <div>
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                  <div>
+                <div class="text-center test">
+                  <div class="book-slider__image">
                     <img src="img/book_2.png" alt="book1">
                   </div>
                   <div class="black__color--dark paragraph">
