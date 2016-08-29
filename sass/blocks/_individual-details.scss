@@ -8,8 +8,6 @@
         font-size: 8rem;
     }
 
-
-
     &__image-holder {
         width: 100%;
         img {
@@ -32,6 +30,8 @@
 
     .book-slider {
         visibility: hidden;
+        max-width: 80%;
+        margin: 0 auto;
         &.slick-initialized {
             visibility: visible;
         }
@@ -45,17 +45,22 @@
             }
         }
         .slick-arrow {
+            z-index: 1000;
             &.slick-next {
                 right: 0;
+            }
+            &.slick-prev {
+                left: 0;
             }
             &:before {
                 color: black;
             }
         }
-    }
-
-    .test {
-        display: inline;
+        &__title {
+            h5 {
+                font-size: 1.7rem;
+            }
+        }
     }
 
 }

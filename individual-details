@@ -34,69 +34,69 @@
               </button>
             </div>
 
-            <div class="black__color--dark">
+            <div class="padding-top-4 padding-bottom-3 black__color--dark">
               <h4>Books</h4>
             </div>
 
             <div class="book-slider">
               <!-- single book -->
               <div>
-                <div class="text-center test">
+                <div class="text-center">
                   <div class="book-slider__image">
                     <img src="img/book_1.png" alt="book1">
                   </div>
-                  <div class="black__color--dark paragraph">
-                    <p>Harry Potter</p>
+                  <div class="book-slider__title padding-top-2 blue__color--dark">
+                    <h5>Lorem Ipsum Dolarsit Amet</h5>
                   </div>
                 </div>
               </div>
               <div>
-                <div class="text-center test">
+                <div class="text-center">
                   <div class="book-slider__image">
                     <img src="img/book_2.png" alt="book1">
                   </div>
-                  <div class="black__color--dark paragraph">
-                    <p>Harry Potter</p>
+                  <div class="book-slider__title padding-top-2 blue__color--dark">
+                    <h5>Lorem Ipsum Dolarsit Amet</h5>
                   </div>
                 </div>
               </div>
               <div>
-                <div class="text-center test">
+                <div class="text-center">
                   <div class="book-slider__image">
                     <img src="img/book_2.png" alt="book1">
                   </div>
-                  <div class="black__color--dark paragraph">
-                    <p>Harry Potter</p>
+                  <div class="book-slider__title padding-top-2 blue__color--dark">
+                    <h5>Lorem Ipsum Dolarsit Amet</h5>
                   </div>
                 </div>
               </div>
               <div>
-                <div class="text-center test">
+                <div class="text-center">
                   <div class="book-slider__image">
                     <img src="img/book_1.png" alt="book1">
                   </div>
-                  <div class="black__color--dark paragraph">
-                    <p>Harry Potter</p>
+                  <div class="book-slider__title padding-top-2 blue__color--dark">
+                    <h5>Lorem Ipsum Dolarsit Amet</h5>
                   </div>
                 </div>
               </div>
               <div>
-                <div class="text-center test">
+                <div class="text-center">
                   <div class="book-slider__image">
                     <img src="img/book_2.png" alt="book1">
                   </div>
-                  <div class="black__color--dark paragraph">
-                    <p>Harry Potter</p>
+                  <div class="book-slider__title padding-top-2 blue__color--dark">
+                    <h5>Lorem Ipsum Dolarsit Amet</h5>
                   </div>
                 </div>
               </div>
               <div>
-                <div class="text-center test">
+                <div class="text-center">
                   <div class="book-slider__image">
                     <img src="img/book_2.png" alt="book1">
                   </div>
-                  <div class="black__color--dark paragraph">
-                    <p>Harry Potter</p>
+                  <div class="book-slider__title padding-top-2 blue__color--dark">
+                    <h5>Lorem Ipsum Dolarsit Amet</h5>
                   </div>
                 </div>
               </div>
