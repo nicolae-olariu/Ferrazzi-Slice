@@ -120,9 +120,16 @@
             margin-top: 3rem;
         }
         &.video-block {
+            &:hover {
+                &:before {
+                    width: 70rem;
+                    height: 70rem;
+                }
+            }
             &:before {
                 width: 5rem;
                 height: 5rem;
+
             }
             &:after {
                 width: 3rem;
