@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('careers-position', ['ui.router', 'ngResource', 'ui.mask', 'slickCarousel'])
+  angular.module('careers-position', ['ui.router', 'ngResource', 'ui.mask'])
     .run(function($rootScope, $state, $stateParams) {
       $rootScope.$state = $state;
       $rootScope.$stateParams = $stateParams;

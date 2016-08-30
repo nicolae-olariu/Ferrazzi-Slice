@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body ng-app="contact-module">
+<section class="contact-section" ng-controller="contactController as ctrl">
+  <div class="container">
+
+    <div class="map-container">
+      <ui-gmap-google-map center='ctrl.map.center' zoom='ctrl.map.zoom'>
+        <ui-gmap-marker idKey='ctrl.map.marker.idKey' coords='ctrl.map.center'>
+          <ui-gmap-window show="ctrl.map.window.show" templateUrl="'map-info.html'";>
+          </ui-gmap-window>
+        </ui-gmap-marker>
+      </ui-gmap-google-map>
+    </div>
+
+
+  </div>
+</section>
+
+<script src="bower_components/lodash/dist/lodash.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/controllers/contact-controller.js"></script>
+</body>
+</html>
