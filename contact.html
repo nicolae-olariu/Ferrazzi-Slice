@@ -13,18 +13,97 @@
 <body ng-app="contact-module">
 <section class="contact-section" ng-controller="contactController as ctrl">
   <div class="container">
+    <div class="padding-top-4">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="black__color--dark padding-bottom-4">
+          <h1>Get in Touch</h1>
+        </div>
 
-    <div class="col-md-6 col-sm-6 col-xs-12"></div>
-    <div class="col-md-6 col-sm-6 col-xs-12">
-      <div class="map-container">
-        <ui-gmap-google-map center='ctrl.map.center' zoom='ctrl.map.zoom'>
-          <ui-gmap-marker idKey='ctrl.map.marker.idKey' coords='ctrl.map.center' options="ctrl.map.marker.options">
-            <ui-gmap-window show="ctrl.map.window.show" templateUrl="'map-info.html'" ;>
-            </ui-gmap-window>
-          </ui-gmap-marker>
-        </ui-gmap-google-map>
+        <div class="pop-up-form ng-scope" ng-controller="contactController as vm">
+          <form class="form ng-valid-email" method="post"
+                ng-submit="vm.submitFormHandler()">
+            <ul class="list-unstyled">
+              <li>
+                <label class="form__label form__label--required" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form__input" ng-model="vm.AppEntity.requestSpeaker.name"
+                       ng-change="vm.resetErrorMessageHandler()">
+              </li>
+              <li>
+                <label class="form__label form__label--required" for="email">Email Address</label>
+                <input type="email" name="email" id="email"
+                       class="form__input ng-valid-email"
+                       ng-model="vm.AppEntity.requestSpeaker.email" ng-change="vm.resetErrorMessageHandler()">
+                <!-- ngIf: vm.AppEntity.requestSpeaker.errorMessages.target == 'email' -->
+              </li>
+
+              <li>
+                <label for="phone-country" class="form__label">Phone</label>
+                <div>
+                  <input type="text" id="phone-country" maxlength="3" name="phone-country" class="form__input
+									form__input--phone">
+                  <input type="text" id="phone-county" maxlength="3" name="phone-county" class="form__input
+									form__input--phone">
+                  <input type="text" id="phone-final" name="phone-final" class="form__input form__input--phone">
+                </div>
+              </li>
+
+              <li>
+                <label class="form__label form__label--required" for="topic">Topic</label>
+                <div class="form__input form__input--select">
+                  <select id="topic" name="topic" ng-model="vm.AppEntity.requestSpeaker.topic"
+                          ng-change="vm.resetErrorMessageHandler()" class="">
+                    <option value="Challenge">Challenge</option>
+                    <option value="Corporate">Corporate</option>
+                    <option value="Non-Profit">Non-Profit</option>
+                  </select>
+                </div>
+                <!-- ngIf: vm.AppEntity.requestSpeaker.errorMessages.target == 'topic' -->
+              </li>
+
+              <li>
+                <label for="comments" class="form__label form__label--required">Message</label>
+                <textarea required="" name="comments" id="comments"
+                          class="form__input form__input--required form__input--textarea"></textarea>
+              </li>
+              <li class="text-center">
+                <button class="btn btn-green text-uppercase btn-slider form__button" type="submit"
+                        ng-disabled="vm.AppEntity.loading">SUBMIT
+                  <!-- ngIf: vm.AppEntity.loading -->
+                </button>
+                <!-- ngIf: vm.AppEntity.requestSpeaker.successMessage -->
+              </li>
+            </ul>
+          </form>
+        </div>
       </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="map-container">
+          <ui-gmap-google-map center='ctrl.map.center' zoom='ctrl.map.zoom'>
+            <ui-gmap-marker idKey='ctrl.map.marker.idKey' coords='ctrl.map.center' options="ctrl.map.marker.options">
+              <ui-gmap-window show="ctrl.map.window.show" templateUrl="'map-info.html'" ;>
+              </ui-gmap-window>
+            </ui-gmap-marker>
+          </ui-gmap-google-map>
+        </div>
 
+        <div>
+          <div class="black__color--dark text-capitalize">
+            <h2>Speaking engagements</h2>
+          </div>
+          <div class="green__color paragraph font__bold">
+            <a href="">speaking@ferrazzigreenlight.com</a>
+          </div>
+        </div>
+        <div>
+          <div class="black__color--dark text-capitalize">
+            <h2>Media inquirires</h2>
+          </div>
+          <div class="green__color paragraph font__bold">
+            <a href="">me@ferrazzigreenlight.com</a>
+          </div>
+        </div>
+
+      </div>
     </div>
 
 

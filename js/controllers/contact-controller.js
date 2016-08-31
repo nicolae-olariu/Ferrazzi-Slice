@@ -4,7 +4,7 @@
   angular.module('contact-module')
     .controller('contactController', contactController);
 
-  function contactController($timeout, uiGmapIsReady) {
+  function contactController() {
 
     var vm = this;
     vm.map = {
@@ -18,8 +18,7 @@
         options: {
           labelContent: 'ferrazzi greenlight',
           labelAnchor: "-10 12",
-          labelClass: 'labelClass',
-          labelInBackground: true
+          labelClass: 'labelClass'
         }
       },
       window: {
