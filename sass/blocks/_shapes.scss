@@ -161,4 +161,14 @@ $big: 9rem;
 	&-black-ultra-dark{
 		@include generateShapesClasses(black, ultra-dark);
 	}
+	&-black-ultra-dark{
+		@include generateShapesClasses(black, ultra-dark);
+	}
+	&-white-base{
+		@include generateShapesClasses(white, base);
+	}
+
+	&-white-dark{
+		@include generateShapesClasses(white, dark);
+	}
 }
