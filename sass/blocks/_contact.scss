@@ -9,6 +9,9 @@
         margin: 0;
         line-height: 3.4rem;
     }
+     h2 {
+         margin-bottom: 0;
+     }
 
     .form__input {
         border-color: palette(grey, lighter);
@@ -52,9 +55,25 @@
         }
     }
 
-    .angular-google-map-container {
-        height: 367px;
+    .map-container {
+        height: 36.7rem;
+        .angular-google-map-container {
+            height: 36.7rem;
+        }
+        a[href^="http://maps.google.com/maps"],
+        a[href^="https://maps.google.com/maps"] {
+            display:none !important
+        }
+
+        .gmnoprint a, .gmnoprint span, .gm-style-cc {
+            display:none;
+        }
+        .gmnoprint div {
+            background:none !important;
+        }
     }
+
+
 }
 
 

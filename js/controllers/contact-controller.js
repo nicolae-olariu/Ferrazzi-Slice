@@ -12,6 +12,9 @@
         latitude: 34.042444,
         longitude: -118.445368
       },
+      options: {
+        disableDefaultUI: true
+      },
       zoom: 18,
       marker: {
         idKey: 1,

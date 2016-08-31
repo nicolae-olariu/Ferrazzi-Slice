@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact</title>
   <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -65,9 +66,9 @@
                 <textarea required="" name="comments" id="comments"
                           class="form__input form__input--required form__input--textarea"></textarea>
               </li>
-              <li class="text-center">
+              <li class="text-center margin-top--2">
                 <button class="btn btn-green text-uppercase btn-slider form__button" type="submit"
-                        ng-disabled="vm.AppEntity.loading">SUBMIT
+                        ng-disabled="vm.AppEntity.loading">submit message
                   <!-- ngIf: vm.AppEntity.loading -->
                 </button>
                 <!-- ngIf: vm.AppEntity.requestSpeaker.successMessage -->
@@ -77,8 +78,8 @@
         </div>
       </div>
       <div class="col-md-6 col-sm-6 col-xs-12">
-        <div class="map-container">
-          <ui-gmap-google-map center='ctrl.map.center' zoom='ctrl.map.zoom'>
+        <div class="map-container padding-bottom-2">
+          <ui-gmap-google-map center='ctrl.map.center' zoom='ctrl.map.zoom' options="ctrl.map.options">
             <ui-gmap-marker idKey='ctrl.map.marker.idKey' coords='ctrl.map.center' options="ctrl.map.marker.options">
               <ui-gmap-window show="ctrl.map.window.show" templateUrl="'map-info.html'" ;>
               </ui-gmap-window>
@@ -91,15 +92,15 @@
             <h2>Speaking engagements</h2>
           </div>
           <div class="green__color paragraph font__bold">
-            <a href="">speaking@ferrazzigreenlight.com</a>
+            <a href="mailTo:speaking@ferrazzigreenlight.com">speaking@ferrazzigreenlight.com</a>
           </div>
         </div>
         <div>
-          <div class="black__color--dark text-capitalize">
+          <div class="black__color--dark text-capitalize padding-top-1">
             <h2>Media inquirires</h2>
           </div>
           <div class="green__color paragraph font__bold">
-            <a href="">me@ferrazzigreenlight.com</a>
+            <a href="mailTo:me@ferrazzigreenlight.com">me@ferrazzigreenlight.com</a>
           </div>
         </div>
 
