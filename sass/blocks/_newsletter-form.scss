@@ -20,6 +20,7 @@
 		line-height: 4.7rem;
 		letter-spacing: -0.02em;
 		padding: 0 1.5rem;
+		color: palette(grey, light);
 	}
 	
 	button {
@@ -91,8 +92,14 @@
 		}
 	}
 	
-	.container .newsletter-form form p.message-response.success {
-		color: palette(blue);
+	.container .newsletter-form form p.message-response {
 		padding-left: 1rem;
+		&.error {
+			color: palette(red);
+		}
+		
+		&.success {
+			color: palette(blue);
+		}
 	}
 }

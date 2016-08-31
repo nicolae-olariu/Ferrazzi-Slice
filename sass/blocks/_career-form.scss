@@ -1,72 +1,71 @@
 .position-section {
-
-    @include respondTo(phone) {
-        padding-bottom: 4rem;
-    }
-
-    .position-section__ul {
-        @include respondTo(notdesktop) {
-            padding: 0 !important;
-        }
-    }
-
-    &__form {
-        overflow: hidden;
-        max-height: 0;
-        @include transition(transform 1s ease);
-        @include transform(scale(0));
-
-        &.form__is-expanded {
-            height: 100%;
-            max-height: 100rem;
-            @include transform(scale(1.0));
-        }
-
-        .position-section__container--submit {
-            @include respondTo(phone) {
-                text-align: center;
-            }
-        }
-
-        .position-section__button {
-            width: 22rem;
-            padding: 2rem 2rem;
-            @include respondTo(notdesktop) {
-                padding: 1.5rem 2.6rem;
-            }
-
-            @include respondTo(phone) {
-                font-size: 1.4rem;
-            }
-
-            @include respondTo(smallPhone) {
-                width: 100%;
-                margin-top: 0;
-            }
-
-
-            &--tight {
-                font-size: 1.4rem;
-                padding: 1.45rem 1.3rem;
-
-                @include respondTo(notdesktop) {
-                    padding: 1rem 2.6rem;
-                }
-
-                @include respondTo(notdesktop) {
-                    font-size: 1.2rem;
-                }
-            }
-
-        }
-    }
-
-    &__upload-container {
-        @include respondTo(smallPhone) {
-            width: 100%;
-            &:first-child {
-                margin-bottom: 1rem;
-            }
-        }
-    }
+	
+	@include respondTo(phone) {
+		padding-bottom: 4rem;
+	}
+	
+	.position-section__ul {
+		@include respondTo(notdesktop) {
+			padding: 0 !important;
+		}
+	}
+	
+	&__form {
+		overflow: hidden;
+		max-height: 0;
+		@include transition(transform 1s ease);
+		@include transform(scale(0));
+		
+		&.form__is-expanded {
+			height: 100%;
+			max-height: 100rem;
+			@include transform(scale(1.0));
+		}
+		
+		.position-section__container--submit {
+			@include respondTo(phone) {
+				text-align: center;
+			}
+		}
+		
+		.position-section__button {
+			width: 22rem;
+			padding: 2rem 2rem;
+			@include respondTo(notdesktop) {
+				padding: 1.5rem 2.6rem;
+			}
+			
+			@include respondTo(phone) {
+				font-size: 1.4rem;
+			}
+			
+			@include respondTo(smallPhone) {
+				width: 100%;
+				margin-top: 0;
+			}
+			
+			&--tight {
+				font-size: 1.4rem;
+				padding: 1.45rem 1.3rem;
+				
+				@include respondTo(notdesktop) {
+					padding: 1rem 2.6rem;
+				}
+				
+				@include respondTo(notdesktop) {
+					font-size: 1.2rem;
+				}
+			}
+			
+		}
+	}
+	
+	&__upload-container {
+		@include respondTo(smallPhone) {
+			width: 100%;
+			&:first-child {
+				margin-bottom: 1rem;
+			}
+		}
+	}
 }

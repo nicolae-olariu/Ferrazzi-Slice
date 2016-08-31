@@ -5,9 +5,28 @@
 		}
 	}
 	
-	.text-right{
-		@include respondTo(phone){
+	.text-right {
+		@include respondTo(phone) {
 			text-align: center;
+		}
+	}
+	
+	.btn {
+		position: relative;
+	}
+	
+	.form__button--loader {
+		position: absolute;
+		right: 1.5rem;
+		top: 50%;
+		@include transform(translateY(-50%));
+		@include transition();
+		opacity: 0;
+	}
+	
+	.loading-form {
+		.form__button--loader {
+			opacity: 1;
 		}
 	}
 }

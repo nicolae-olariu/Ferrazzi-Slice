@@ -1,0 +1,42 @@
+.single-insights {
+	
+	&__paragraph {
+		> * {
+			padding-bottom: 2rem;
+		}
+	}
+	
+	&__keys {
+		line-height: 3rem;
+		padding-left: 1rem;
+		&:before {
+			content: '\2022';
+			padding-right: .5rem;
+		}
+	}
+	
+	&__keys-container {
+		padding: 4.5rem 2rem 6rem;
+	}
+}
+
+.author {
+	&__image {
+		margin-right: 2rem;
+		max-width: 13rem;
+		float: left;
+	}
+	&__content {
+		
+	}
+}
+
+.single-research-container {
+	.header-share {
+		margin-top: -5rem;
+		
+		@include respondTo(phone) {
+			margin-top: 0;
+		}
+	}
+}

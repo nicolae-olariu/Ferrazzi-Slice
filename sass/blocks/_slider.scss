@@ -1,81 +1,99 @@
 .slider-wrapper {
 	position: relative;
-
-	ul{
+	
+	ul {
 		margin: 0;
 	}
-
+	
 	.slider-item {
 		position: relative;
-		height: 100vh;
-
-		.bellow-content{
-			img{
-				width: 100vw;
+		height: 75vh;
+		
+		.bellow-content {
+			min-width: 100vw;
+			min-height: 75vh;
+			position: relative;
+			overflow: hidden;
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				min-width: 100vw;
+				max-width: none;
+				min-height: 100vh;
+				height: auto;
+				width: auto;
+				
+				@include transform(translate(-50%, -50%));
 			}
 		}
 		.above-content {
 			position: absolute;
-			top: 50%;
+			bottom: 7rem;
 			left: 0;
 			width: 100%;
-
-			@include transform(translateY(-50%));
-			@include respondTo(tablet){
-				top: auto;
-				bottom: 40%;
-
-				@include transform(translateY(50%));
+			
+			@include respondTo(phone){
+				max-width: 84%;
 			}
-
+			
 			h2,
 			h3,
-			.btn{
+			.btn {
 				color: palette(white, dark);
 			}
-
-			h2{
-				font-size: 12rem;
-				line-height: 10rem;
+			
+			h2 {
+				font-size: 8rem;
+				line-height: 7rem;
 				letter-spacing: 0;
 				margin-bottom: 1rem;
 				text-transform: none;
-
+				
 				@include fall-font(NewsGothicMT Bold);
-				@include respondTo(tablet){
-					font-size: 7rem;
-					line-height: 6rem;
+				@include respondTo(tablet) {
+					font-size: 5rem;
+					line-height: 5.5rem;
+				}
+				
+				@include respondTo(phone) {
+					font-size: 3rem;
+					line-height: 3.5rem;
 				}
 			}
-			h3{
+			h3 {
 				font-size: 4.4rem;
 				line-height: 1;
 				letter-spacing: 0;
-
+				
 				@include fall-font(NewsGothicMT Italic);
-				@include respondTo(tablet){
+				@include respondTo(tablet) {
 					font-size: 3rem;
+				}
+				
+				@include respondTo(phone) {
+					font-size: 2rem;
 				}
 			}
 		}
 	}
-	.owl-dots{
+	.owl-dots {
 		position: absolute;
 		bottom: 1.6rem;
 		text-align: center;
 		width: 100%;
-
-		.owl-dot{
+		
+		.owl-dot {
 			width: .9rem;
 			height: .9rem;
 			background-color: palette(white, dark);
 			display: inline-block;
 			margin: 0 .5rem;
 			cursor: pointer;
-
+			
 			@include border-radius(50%);
-
-			&.active{
+			
+			&.active {
 				background-color: palette(green);
 			}
 		}

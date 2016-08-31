@@ -290,7 +290,7 @@
 }
 
 @mixin fall-font($font) {
-	font-family: $font, sans-serif;
+	font-family: $font;
 }
 
 @function decimal-round ($number, $digits: 0, $mode: round) {

@@ -25,13 +25,11 @@
 			vertical-align: top;
 		}
 		
-		@include respondTo(phone){
+		@include respondTo(notdesktop){
 			display: none;
 		}
 
 		&.quote-close {
-			margin: 1.5rem 0 -2rem;
-
 			@include transform(rotate(180deg));
 			@include respondTo(tablet){
 				margin: 4.5rem 0 -2rem;
@@ -47,7 +45,7 @@
 
 		@include fall-font(NewsGothicMT Bold);
 		
-		@include respondTo(phone){
+		@include respondTo(notdesktop){
 			width: 100%;
 		}
 
@@ -55,7 +53,7 @@
 			color: palette(white, dark);
 			font-size: 3.2rem;
 			letter-spacing: -0.03em;
-			line-height: 1;
+			line-height: 1.2;
 			margin-bottom: 3rem;
 			
 			@include respondTo(phone){

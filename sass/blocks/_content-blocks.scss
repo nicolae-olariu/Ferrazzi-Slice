@@ -1,37 +1,40 @@
 .content-blocks {
-	&__title {
-		min-height: 3rem;
-	}
-	&__text {
-		
+	&__image {
+		margin-top: 2rem;
 	}
 	&__url {
 		
 	}
 	
-	&__one{
-		.content-blocks__title{
+	&__text {
+		a {
+			color: palette(green);
+			@extend .font__bold;
+		}
+	}
+	
+	&__one {
+		.content-blocks__title {
 			height: auto;
 		}
-		.content-blocks__video{
+		.content-blocks__video {
 			height: 32rem;
 			margin-top: 2rem;
 		}
 	}
 	
-	img{
+	img {
 		max-width: 100%;
 		height: auto;
 		
-		@include respondTo(phone){
+		@include respondTo(phone) {
 			height: 100%;
 		}
 	}
 	&__video {
-		margin-top: 6rem;
 		height: 25.5rem;
 		
-		@include respondTo(phone){
+		@include respondTo(phone) {
 			height: 30rem;
 		}
 	}

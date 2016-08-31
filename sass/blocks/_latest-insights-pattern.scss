@@ -148,10 +148,10 @@
 			height: 100%;
 			position: relative;
 			z-index: 2;
-			padding: 3rem 2.5rem;
+			padding: 2rem;
 			
 			@include respondTo(tablet) {
-				padding: 2rem;
+				padding: 1.5rem;
 			}
 			
 			.category-position {
@@ -187,3 +187,9 @@
 	}
 }
 
+.insights-logo{
+	img{
+		max-height: 5rem;
+		width: auto;
+	}
+}

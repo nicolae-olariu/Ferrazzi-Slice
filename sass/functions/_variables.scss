@@ -8,6 +8,7 @@ $palettes: (
 				base: #56a34c,
 				light: #fab242,
 				semi-light: #457b49,
+				medium: #62b059,
 				semi-dark: #529949,
 				dark: #31612D,
 				ultra-dark: #1a2b1b
@@ -25,16 +26,18 @@ $palettes: (
 		grey: (
 				base: #797979,
 				light: #d1d2d4,
+				dark: #9f9f9f,
 				lighter: #c8c8c8
 		),
 		red: (
-				base: #ff0000
+				base: #fc4951
 		)
 );
 $breakpoints: (
-		desktop: '(min-width: 1200px)',
+		desktop: '(min-width: 1281px)',
 		notdesktop: '(max-width: 991px)',
-		desktopSmall: '(min-width: 992px) and (max-width: 1199px)',
+		desktopSmall: '(max-width: 1280px)',
+		minDesktop: '(min-width: 991px)',
 		tablet: '(min-width: 768px) and (max-width: 991px)',
 		minTablet: '(min-width: 768px)',
 		phone: '(max-width: 767px)',

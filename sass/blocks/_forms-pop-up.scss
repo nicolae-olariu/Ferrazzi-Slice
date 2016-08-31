@@ -1,0 +1,103 @@
+.pop-up-form {
+	width: 60rem;
+	margin: 0 auto;
+	max-width: 95%;
+	padding-bottom: 2rem;
+	
+	max-height: 90vh;
+	overflow: auto;
+	
+	&--wider {
+		width: 65rem;
+	}
+	
+	@include respondTo(desktopSmall) {
+		max-height: 85vh;
+		width: 40rem;
+	}
+	
+	.h1 {
+		@include respondTo(desktopSmall) {
+			font-size: 3rem;
+			line-height: 3.2rem;
+		}
+	}
+	
+	.form {
+		&__label {
+			@extend .h5;
+			color: palette(black, dark);
+			margin-top: 1.5rem;
+			
+			@include respondTo(desktopSmall) {
+				margin-top: 1rem;
+			}
+			
+			@include respondTo(phone) {
+				margin-top: 1.5rem;
+			}
+			
+			&--checkbox {
+				margin: 0;
+				display: inline-block;
+				width: auto;
+			}
+			
+			&--normal{
+				@include fall-font(NewsGothicMT);
+			}
+		}
+		
+		&__input {
+			margin-top: .2rem;
+			margin-bottom: 0;
+			border-color: palette(grey, lighter);
+			background-color: palette(white);
+			@include transition();
+			
+			&:focus {
+				background-color: palette(grey, lighter);
+			}
+			
+			@include respondTo(desktopSmall) {
+				height: 3rem;
+				font-size: 1.4rem;
+				line-height: 2.2rem;
+			}
+		}
+		&__button {
+			margin-top: 3rem;
+			padding-top: 1.5rem;
+			padding-bottom: 1.5rem;
+			position: relative;
+			
+			@include respondTo(desktopSmall) {
+				margin-top: 2rem;
+			}
+			
+			&--loader {
+				color: palette(white);
+				position: absolute;
+				right: 2rem;
+				top: 50%;
+				@include transform(translateY(-50%));
+				
+				@include respondTo(phone) {
+					right: 1rem;
+				}
+			}
+		}
+		&__message {
+			padding: 0;
+			
+			&--error {
+				color: palette(red);
+			}
+			
+			&--success {
+				margin-top: 1rem;
+				color: palette(green);
+			}
+		}
+	}
+}

@@ -1,29 +1,53 @@
-.the-fg-way {
-	&__image {
-		overflow: hidden;
-		width: 22rem;
-		height: 22rem;
-		position: relative;
+.col-custom {
+	width: 20%;
+	float: left;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	
+	@include respondTo(phone) {
+		width: 100%;
+	}
+	
+	&-big {
+		width: 80%;
+		float: left;
+		padding-right: 1.5rem;
+		padding-left: 1.5rem;
 		
-		@include respondTo(phone){
-			margin: auto;
-		}
-		
-		@include border-radius(50%);
-		img {
-			height: auto;
-			max-width: 80%;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			@include transform(translate(-50%, -50%))
+		@include respondTo(phone) {
+			width: 100%;
 		}
 	}
 	
-	&__title,
-	&__content{
-		@include respondTo(phone){
-			text-align: center;
+	.hide-mobile {
+		@include respondTo(phone) {
+			display: none;
 		}
+	}
+	
+	.img-responsive {
+		padding: 0 .7rem 0.5rem;
+		max-width: 200px;
+		margin: auto;
+		
+		img {
+			width: 100%;
+		}
+	}
+	
+	.h5--normal {
+		@include respondTo(phone) {
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.the-fg-way-container {
+	@include respondTo(phone) {
+		margin-left: 0;
+	}
+	
+	[href="javascript:;"] {
+		cursor: default;
 	}
 }

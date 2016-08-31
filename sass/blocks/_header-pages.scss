@@ -2,16 +2,27 @@
 	width: 100vw;
 	position: relative;
 	
-	&--simple{
+	&--simple,
+	&--careers-single{
 		min-height: 60vh;
+		
+		@include respondTo(phone){
+			min-height: 80vh;
+		}
 	}
 	
 	&--complex{
-		min-height: 80vh;
+		min-height: 100vh;
+		@include respondTo(phone){
+			min-height: 120vh;
+		}
 	}
-	
+	 
 	&--single{
 		min-height: 80vh;
+		@include respondTo(phone){
+			min-height: 100vh;
+		}
 	}
 	
 	&__background {
@@ -114,6 +125,10 @@
 		
 		&:last-child {
 			margin-right: 0;
+		}
+		
+		&:first-child {
+			margin-left: 0;
 		}
 		
 		a{

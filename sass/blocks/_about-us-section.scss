@@ -1,5 +1,5 @@
 .about-us-section {
-	padding: 3.5rem 0 2.5rem;
+	padding: 3.5rem 0 1rem;
 	position: relative;
 	z-index: 11;
 
@@ -8,13 +8,30 @@
 	}
 
 	h2 {
-		color: palette(green);
+		color: palette(red);
 	}
 
 	.block-about-us {
 		height: 24.5rem;
 		position: relative;
 		margin-bottom: 1.5rem;
+		overflow: hidden;
+		
+		@include respondTo(phone){
+			height: auto;
+			padding-bottom: 2rem;
+			
+			.block-content .newsletter-form p{
+				margin-bottom: 0;
+			}
+		}
+		
+		&:hover{
+			.block-background__filter{
+				width: 50vw;
+				height: 50vw;
+			}
+		}
 
 		.block-background {
 			position: absolute;
@@ -24,6 +41,19 @@
 			left: 0;
 			z-index: 1;
 			background: no-repeat center center/cover;
+			
+			&__filter{
+				position: absolute;
+				z-index: 2;
+				width: 0;
+				height: 0;
+				top: 50%;
+				left: 50%;
+				
+				@include transition(all 0.5s ease 0s);
+				@include border-radius(50%);
+				@include transform(translate(-50%, -50%))
+			}
 		}
 
 		.block-content {

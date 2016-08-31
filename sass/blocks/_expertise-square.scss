@@ -1,253 +1,259 @@
 .expertise-square {
-    a {
-        display: block;
-    }
-    &__container {
-        width: 71%;
-        margin: 0 auto;
-
-        @include respondTo(phone) {
-            width: 100%;
-        }
-    }
-
-    &__outside {
-        &:hover + .pop-up-text {
-            display: block;
-        }
-
-        @include respondTo(phone) {
-            padding: 0;
-        }
-
-    }
-
-    &__link-container {
-        position: relative;
-        display: inline-block;
-
-        &:before,
-        &:after {
-            content: "";
-            width: 100%;
-            height: .5rem;
-            background-color: palette(grey);
-            position: absolute;
-            top: 50%;
-            margin-top: -.2rem;
-            cursor: default;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        &.no-after {
-            &:after {
-                content: none;
-            }
-        }
-
-        &.connect-right {
-            &:after {
-                left: 100%;
-                width: 200%;
-            }
-
-            &--bottom {
-                &:after {
-                    transform: rotate(50deg);
-                    width: 38rem;
-                    left: 3rem;
-                    top: 27rem;
-                }
-            }
-        }
-
-        &.connect-left {
-            &:before {
-                right: 100%;
-                width: 200%;
-            }
-            &--bottom {
-                &:before {
-                    transform: rotate(-50deg);
-                    width: 25rem;
-                    left: -13rem;
-                    top: 21rem;
-                }
-            }
-        }
-
-        @include respondTo(tablet) {
-            &.connect-right {
-                &--bottom {
-                    &:after {
-                        width: 33rem;
-                        left: 2rem;
-                        top: 23rem;
-                    }
-                }
-            }
-
-            &.connect-left {
-                &--bottom {
-                    &:before {
-                        width: 25rem;
-                        left: -11rem;
-                        top: 13rem;
-                    }
-                }
-            }
-        }
-
-        @include respondTo(phone) {
-            margin: 0;
-            &:before,
-            &:after {
-                content: none;
-            }
-        }
-    }
-
-    &__shape-container {
-        position: relative;
-        width: 16.5rem;
-        height: 16.5rem;
-        background-color: palette(blue, light);
-        @include border-radius-separate(25px, 25px, 0, 25px);
-        z-index: 12;
-
-        img {
-            width: 100%;
-        }
-
-        @include respondTo(tablet) {
-            width: 12rem;
-            height: 12rem;
-        }
-    }
-
-    &__content {
-        width: 100%;
-        height: 100%;
-        border: 1px solid palette(white, base);
-        @include border-radius-separate(20px, 20px, 0, 20px);
-        background-size: cover;
-        background: no-repeat center center;
-    }
-
-    .pop-up-text {
-        position: absolute;
-        display: none;
-        width: 30rem;
-        padding: 2.2rem;
-        background-color: transparentize(palette(green, light), 0.1);
-        z-index: 100;
-        pointer-events: none;
-        min-height: 13.5rem;
-        top: -14rem;
-        right: 0;
-        @include border-radius(2rem);
-
-        &:before {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 44%;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 3rem 1.7rem 0 1.7rem;
-            border-color: transparentize(palette(green, light), 0.1) transparent transparent transparent;
-        }
-
-        &.right-side {
-            left: 0;
-            &:before {
-                right: 3.5rem;
-            }
-        }
-
-        &.middle-side {
-            left: -16%;
-            @include respondTo(tablet) {
-                left: -22%;
-            }
-        }
-
-        &__content {
-            @include fall-font(NewsGothicMT Bold);
-            font-size: 1.3rem;
-            letter-spacing: -0.02em;
-            line-height: 1.5rem;
-            color: palette(white, dark);
-            text-align: center;
-            @include respondTo(phone) {
-                font-size: 1.4rem;
-                color: palette(black, light);
-                line-height: inherit;
-            }
-        }
-
-        @include respondTo(tablet) {
-            width: 24rem;
-            padding: 1rem;
-            min-height: 12rem;
-        }
-
-        @include respondTo(phone) {
-            position: static;
-            display: block;
-            width: 100%;
-            min-height: initial;
-            pointer-events: auto;
-            background-color: transparent;
-
-            &:before {
-                content: none;
-            }
-        }
-    }
-
-    .flex__justfify-space-between > div {
-        padding: 0;
-    }
-
-    .flex__justfify-space-around {
-        .pop-up-text {
-            &.left-side {
-                right: -2rem;
-                @include respondTo(tablet) {
-
-                }
-            }
-
-            &.right-side {
-                left: -2rem;
-                @include respondTo(tablet) {
-                    left: -3.5rem;
-                }
-            }
-        }
-    }
-
-    .flex__justfify-space-between {
-        .pop-up-text {
-            &.left-side {
-                right: -1rem;
-                @include respondTo(tablet) {
-                    right: -0.3rem;
-                }
-            }
-            &.right-side {
-                left: -0.7rem;
-            }
-        }
-    }
-
-
-    @include respondTo(phone) {
-        .flex__justfify-space-around > div {
-            padding: 0;
-        }
-    }
+	a {
+		display: block;
+	}
+	&__container {
+		width: 71%;
+		margin: 0 auto;
+		
+		@include respondTo(phone) {
+			width: 100%;
+		}
+	}
+	
+	&__outside {
+		&:hover + .pop-up-text {
+			display: block;
+		}
+		
+		@include respondTo(phone) {
+			padding: 0;
+		}
+		
+	}
+	
+	&__link-container {
+		position: relative;
+		display: inline-block;
+		
+		&:before,
+		&:after {
+			content: "";
+			width: 100%;
+			height: .5rem;
+			background-color: palette(grey);
+			position: absolute;
+			top: 50%;
+			margin-top: -.2rem;
+			cursor: default;
+			z-index: 1;
+			pointer-events: none;
+		}
+		
+		&.no-after {
+			&:after {
+				content: none;
+			}
+		}
+		
+		&.connect-right {
+			&:after {
+				left: 100%;
+				width: 200%;
+			}
+			
+			&--bottom {
+				&:after {
+					transform: rotate(50deg);
+					width: 38rem;
+					left: 3rem;
+					top: 27rem;
+				}
+			}
+		}
+		
+		&.connect-left {
+			&:before {
+				right: 100%;
+				width: 200%;
+			}
+			&--bottom {
+				&:before {
+					transform: rotate(-50deg);
+					width: 25rem;
+					left: -13rem;
+					top: 21rem;
+				}
+			}
+		}
+		
+		@include respondTo(tablet) {
+			&.connect-right {
+				&--bottom {
+					&:after {
+						width: 33rem;
+						left: 2rem;
+						top: 23rem;
+					}
+				}
+			}
+			
+			&.connect-left {
+				&--bottom {
+					&:before {
+						width: 25rem;
+						left: -11rem;
+						top: 13rem;
+					}
+				}
+			}
+		}
+		
+		@include respondTo(phone) {
+			margin: 0;
+			&:before,
+			&:after {
+				content: none;
+			}
+		}
+	}
+	
+	&__shape-container {
+		position: relative;
+		width: 16.5rem;
+		height: 16.5rem;
+		background-color: palette(blue, light);
+		@include border-radius-separate(25px, 25px, 0, 25px);
+		z-index: 12;
+		
+		img {
+			width: 100%;
+		}
+		
+		@include respondTo(tablet) {
+			width: 12rem;
+			height: 12rem;
+		}
+	}
+	
+	&__content {
+		width: 100%;
+		height: 100%;
+		border: 1px solid palette(white, base);
+		@include border-radius-separate(20px, 20px, 0, 20px);
+		background-size: cover;
+		background: no-repeat center center;
+	}
+	
+	.pop-up-text {
+		position: absolute;
+		display: none;
+		width: 30rem;
+		padding: 2.2rem;
+		background-color: transparentize(palette(green, light), 0.1);
+		z-index: 100;
+		pointer-events: none;
+		min-height: 13.5rem;
+		bottom: 24.7rem;
+		right: 0;
+		@include border-radius(2rem);
+		
+		&:before {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 44%;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 3rem 1.7rem 0 1.7rem;
+			border-color: transparentize(palette(green, light), 0.1) transparent transparent transparent;
+		}
+		
+		&.right-side {
+			left: 0;
+			&:before {
+				right: 3.5rem;
+			}
+		}
+		
+		&.middle-side {
+			left: -16%;
+			@include respondTo(tablet) {
+				left: -22%;
+			}
+		}
+		
+		&__content {
+			@include fall-font(NewsGothicMT Bold);
+			font-size: 1.3rem;
+			letter-spacing: -0.02em;
+			line-height: 1.5rem;
+			color: palette(white, dark);
+			text-align: center;
+			@include respondTo(phone) {
+				font-size: 1.4rem;
+				color: palette(black, light);
+				line-height: inherit;
+			}
+		}
+		
+		@include respondTo(tablet) {
+			width: 24rem;
+			padding: 1rem;
+			min-height: 12rem;
+		}
+		
+		@include respondTo(phone) {
+			position: static;
+			display: block;
+			width: 100%;
+			min-height: initial;
+			pointer-events: auto;
+			background-color: transparent;
+			
+			&:before {
+				content: none;
+			}
+		}
+	}
+	
+	.flex__justfify-space-between > div {
+		padding: 0;
+	}
+	
+	.flex__justfify-space-around {
+		.pop-up-text {
+			&.left-side {
+				right: 2rem;
+				
+				&:before {
+					left: 60%;
+				}
+			}
+			
+			&.right-side {
+				left: 2rem;
+				
+				&:before {
+					left: 27%;
+				}
+			}
+		}
+	}
+	
+	.flex__justfify-space-between {
+		.pop-up-text {
+			&.left-side {
+				right: 3rem;
+				
+				&:before {
+					left: 60%;
+				}
+			}
+			&.right-side {
+				left: 3rem;
+				
+				&:before {
+					left: 27%;
+				}
+			}
+		}
+	}
+	
+	@include respondTo(phone) {
+		.flex__justfify-space-around > div {
+			padding: 0;
+		}
+	}
 }

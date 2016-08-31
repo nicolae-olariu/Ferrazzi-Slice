@@ -1,143 +1,189 @@
 .individual-details {
-    .page-quote {
-        background-color: transparent;
-    }
-
-    &__title {
-        @include respondTo(phone) {
-            text-align: center;
-        }
-    }
-
-    .testimonial-single {
-        padding: 0 0 1.5rem 0.3rem;
-        @include respondTo(notdesktop) {
-            margin-left: 0;
-            .quote-content {
-                width: 100%;
-            }
-        }
-    }
-
-    .quote-symbol {
-        color: palette(black, dark);
-        font-size: 8rem;
-        @include respondTo(notdesktop) {
-            display: none;
-        }
-    }
-
-    &__image-holder {
-        width: 100%;
-        img {
-            width: 100%;
-            height: auto;
-        }
-        @include respondTo(phone) {
-            width: 32rem;
-            margin: 0 auto;
-        }
-        @include respondTo(smallPhone) {
-            width: 100%;
-        }
-    }
-
-    .header-content__share--simple {
-        .header-share__item {
-            &:first-child {
-                margin-left: 0;
-            }
-        }
-    }
-
-    .book-slider {
-        visibility: hidden;
-        &.slick-initialized {
-            visibility: visible;
-        }
-        &__image {
-            width: 10.5rem;
-            height: 16rem;
-            margin: 0 auto;
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
-        .slick-arrow {
-            z-index: 1000;
-            &.slick-next {
-                right: 0;
-            }
-            &.slick-prev {
-                left: 0;
-            }
-            &:before {
-                color: black;
-            }
-        }
-        &__title {
-            max-width: 80%;
-            margin: 0 auto;
-            h5 {
-                font-size: 1.7rem;
-            }
-        }
-    }
-
-    .btn-slider {
-        margin-top: 3.7rem;
-        @include respondTo(phone) {
-            margin-top: 2rem;
-        }
-    }
-
-    .hide-desktop {
-        margin-top: -3rem;
-        text-align: center;
-        h3 {
-            margin-top: 0;
-        }
-        @include respondTo(minTablet) {
-            display: none;
-        }
-    }
-
-    .hide-mobile {
-        @include respondTo(phone) {
-            display: none;
-        }
-    }
-
-    .content-blocks__video {
-        width: 28.4rem;
-        height: auto;
-        max-height: 25rem;
-        margin: 7rem auto 0;
-        @include respondTo(phone) {
-            width:100%;
-            height: 25rem;
-            margin-top: 3rem;
-        }
-        &.video-block {
-            &:hover {
-                &:before {
-                    width: 70rem;
-                    height: 70rem;
-                }
-            }
-            &:before {
-                width: 5rem;
-                height: 5rem;
-
-            }
-            &:after {
-                width: 3rem;
-                height: 3rem;
-                font-size: 2rem;
-            }
-
-        }
-    }
-
+	.speakers {
+		&:last-child {
+			padding-bottom: 8rem;
+		}
+		
+		&:nth-child(2n) {
+			background-color: palette(white, dark);
+		}
+	}
+	
+	.page-quote {
+		background-color: transparent;
+	}
+	
+	&__title {
+		@include respondTo(phone) {
+			text-align: center;
+		}
+	}
+	
+	.testimonial-single {
+		padding: 0 0 1.5rem 0.3rem;
+		@include respondTo(notdesktop) {
+			margin-left: 0;
+			.quote-content {
+				width: 100%;
+			}
+		}
+	}
+	
+	.quote-symbol {
+		color: palette(black, dark);
+		font-size: 8rem;
+		@include respondTo(notdesktop) {
+			display: none;
+		}
+	}
+	.quote-content {
+		margin-top: 1.5rem;
+	}
+	
+	.testimonial-single {
+		padding-bottom: 0;
+	}
+	.header-content__share--simple .header-share__item {
+		font-size: 2.2rem;
+		width: 3rem;
+	}
+	&__image-holder {
+		width: 100%;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		@include respondTo(phone) {
+			width: 32rem;
+			margin: 0 auto;
+		}
+		@include respondTo(smallPhone) {
+			width: 100%;
+		}
+	}
+	
+	.header-content__share--simple {
+		.header-share__item {
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	
+	.book-slider {
+		position: relative;
+		&__image {
+			width: 10.5rem;
+			height: 16rem;
+			margin: 0 auto;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.owl-item {
+			padding: 0 2rem;
+		}
+		.owl-stage-outer {
+			z-index: 1;
+		}
+		.owl-nav {
+			position: absolute;
+			top: 40%;
+			left: 0;
+			right: 0;
+			z-index: 2;
+			visibility: hidden;
+			
+			@include transform(translateY(-50%));
+			
+			.disabled {
+				display: none;
+			}
+			
+			.owl-next,
+			.owl-prev {
+				visibility: visible;
+				font-size: 2rem;
+				color: palette(green);
+				@include transition();
+				
+				&:hover {
+					color: palette(green, dark);
+				}
+			}
+			
+			.owl-next {
+				float: right;
+			}
+			.owl-prev {
+				float: left;
+				
+			}
+		}
+		&__title {
+			max-width: 100%;
+			margin: 0 auto;
+			.h5 {
+				font-size: 1.7rem;
+			}
+		}
+	}
+	
+	.btn-slider {
+		margin-top: 3.7rem;
+		@include respondTo(phone) {
+			margin-top: 2rem;
+		}
+	}
+	
+	.hide-desktop {
+		margin-top: -3rem;
+		text-align: center;
+		.h3 {
+			margin-top: 0;
+		}
+		@include respondTo(minTablet) {
+			display: none;
+		}
+	}
+	
+	.hide-mobile {
+		@include respondTo(phone) {
+			display: none;
+		}
+	}
+	
+	.content-blocks__video {
+		width: 28.4rem;
+		height: auto;
+		max-height: 17rem;
+		margin: 7rem auto 0;
+		@include respondTo(phone) {
+			width: 100%;
+			height: 25rem;
+			margin-top: 3rem;
+		}
+		&.video-block {
+			&:hover {
+				&:before {
+					width: 70rem;
+					height: 70rem;
+				}
+			}
+			&:before {
+				width: 5rem;
+				height: 5rem;
+				
+			}
+			&:after {
+				width: 5rem;
+				height: 5rem;
+				font-size: 2.5rem;
+				line-height: 4.8rem;
+			}
+			
+		}
+	}
+	
 }

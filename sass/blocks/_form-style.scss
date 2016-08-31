@@ -13,6 +13,10 @@
 				@extend .font__bold;
 			}
 		}
+		
+		&--normal {
+			@include fall-font(NewsGothicMT);
+		}
 	}
 	
 	&__input {
@@ -23,8 +27,88 @@
 		line-height: 4rem;
 		padding: 1rem;
 		margin-bottom: 1.5rem;
-		&--required {
+		
+		&--select {
+			padding: 0;
+			position: relative;
+			&:after {
+				content: '\f0d7';
+				display: inline-block;
+				font-family: 'FontAwesome';
+				font-style: normal;
+				font-weight: normal;
+				line-height: 1.2;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				font-size: 3rem;
+				text-align: center;
+				color: palette(black, dark);
+				position: absolute;
+				top: 50%;
+				right: 1.5rem;
+				pointer-events: none;
+				z-index: 10;
+				@include transform(translateY(-50%));
+			}
 			
+			select {
+				border: 0 none;
+				width: 100%;
+				height: 4.8rem;
+				text-indent: 1rem;
+				-webkit-appearance: none;
+				background-color: transparent;
+				@include transition();
+				
+				@include respondTo(desktopSmall) {
+					height: 2.8rem;
+				}
+				
+				&:focus {
+					background-color: palette(grey, lighter);
+				}
+				
+				&::-ms-expand {
+					display: none;
+				}
+				
+				option {
+					padding: 1rem;
+				}
+			}
+		}
+		&--multi-select {
+			border: 0 none;
+			
+			.form__label {
+				text-indent: 0;
+				@include respondTo(desktopSmall) {
+					margin-top: .3rem;
+				}
+				
+				&--normal {
+					@extend .font__normal;
+				}
+			}
+			
+			input:checked + ul {
+				max-height: 22rem;
+				overflow-y: auto;
+				background-color: palette(grey, lighter);
+				z-index: 15;
+			}
+			
+			ul {
+				position: absolute;
+				z-index: 2;
+				border: 1px solid palette(grey, lighter);
+				background-color: palette(white);
+				padding: 0 0 1rem 1rem;
+				max-height: 100%;
+				overflow: hidden;
+				width: 100%;
+				@include transition(all 0.7s ease 0s);
+			}
 		}
 		
 		&--phone {
@@ -51,7 +135,7 @@
 	}
 	
 	&__message {
-		padding-top: 2rem;
+		padding-top: 1rem;
 		padding-right: 2rem;
 		@extend .font__bold;
 		
@@ -64,14 +148,14 @@
 		}
 	}
 	
-	&__loader{
+	&__loader {
 		font-size: 2.5rem;
 		margin-left: 1rem;
 		display: inline-block;
 		@include transform(scale(0));
 		opacity: 0;
-				
-		&--show{
+		
+		&--show {
 			@include transform(scale(1));
 			opacity: 1;
 		}
