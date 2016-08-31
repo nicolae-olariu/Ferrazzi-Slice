@@ -71,15 +71,25 @@
         .gmnoprint div {
             background:none !important;
         }
+
+        .labelClass {
+            font-family: NewsGothicMT Bold, sans-serif;
+            text-transform: capitalize;
+            color: palette(red);
+            font-size: 1.2rem;
+        }
+    }
+
+    .btn-slider {
+        @include respondTo(phone) {
+            margin: 1rem 0;
+        }
     }
 
 
+
 }
 
 
-.labelClass {
-    font-family: NewsGothicMT Bold, sans-serif;
-    text-transform: capitalize;
-    color: palette(red);
-    font-size: 1.2rem;
-}
+
+

@@ -14,27 +14,26 @@
 <body ng-app="contact-module">
 <section class="contact-section" ng-controller="contactController as ctrl">
   <div class="container">
-    <div class="padding-top-4">
+    <div class="col-xs-12 padding-top-4 padding-bottom-4">
       <div class="col-md-6 col-sm-6 col-xs-12">
         <div class="black__color--dark padding-bottom-4">
           <h1>Get in Touch</h1>
         </div>
 
-        <div class="pop-up-form ng-scope" ng-controller="contactController as vm">
+        <div class="pop-up-form">
           <form class="form ng-valid-email" method="post"
-                ng-submit="vm.submitFormHandler()">
+                ng-submit="ctrl.submitFormHandler()">
             <ul class="list-unstyled">
               <li>
                 <label class="form__label form__label--required" for="name">Name</label>
-                <input type="text" name="name" id="name" class="form__input" ng-model="vm.AppEntity.requestSpeaker.name"
-                       ng-change="vm.resetErrorMessageHandler()">
+                <input type="text" name="name" id="name" class="form__input" ng-model="ctrl.AppEntity.requestSpeaker.name"
+                       ng-change="ctrl.resetErrorMessageHandler()">
               </li>
               <li>
                 <label class="form__label form__label--required" for="email">Email Address</label>
                 <input type="email" name="email" id="email"
                        class="form__input ng-valid-email"
-                       ng-model="vm.AppEntity.requestSpeaker.email" ng-change="vm.resetErrorMessageHandler()">
-                <!-- ngIf: vm.AppEntity.requestSpeaker.errorMessages.target == 'email' -->
+                       ng-model="ctrl.AppEntity.requestSpeaker.email" ng-change="ctrl.resetErrorMessageHandler()">
               </li>
 
               <li>
@@ -51,14 +50,13 @@
               <li>
                 <label class="form__label form__label--required" for="topic">Topic</label>
                 <div class="form__input form__input--select">
-                  <select id="topic" name="topic" ng-model="vm.AppEntity.requestSpeaker.topic"
-                          ng-change="vm.resetErrorMessageHandler()" class="">
+                  <select id="topic" name="topic" ng-model="ctrl.AppEntity.requestSpeaker.topic"
+                          ng-change="ctrl.resetErrorMessageHandler()" class="">
                     <option value="Challenge">Challenge</option>
                     <option value="Corporate">Corporate</option>
                     <option value="Non-Profit">Non-Profit</option>
                   </select>
                 </div>
-                <!-- ngIf: vm.AppEntity.requestSpeaker.errorMessages.target == 'topic' -->
               </li>
 
               <li>
@@ -68,10 +66,8 @@
               </li>
               <li class="text-center margin-top--2">
                 <button class="btn btn-green text-uppercase btn-slider form__button" type="submit"
-                        ng-disabled="vm.AppEntity.loading">submit message
-                  <!-- ngIf: vm.AppEntity.loading -->
+                        ng-disabled="ctrl.AppEntity.loading">submit message
                 </button>
-                <!-- ngIf: vm.AppEntity.requestSpeaker.successMessage -->
               </li>
             </ul>
           </form>
