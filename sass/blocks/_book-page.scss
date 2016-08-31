@@ -1,0 +1,10 @@
+.book-page {
+    .reverse {
+        .book-page__image {
+            order: 1;
+        }
+        .book-page__button {
+            text-align: left;
+        }
+    }
+}
