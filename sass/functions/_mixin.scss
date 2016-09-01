@@ -384,3 +384,14 @@
 		}
 	}
 }
+
+
+//vertical align for position absolute or relative
+@mixin vertical-align($position: absolute) {
+	position: $position;
+	top: 50%;
+	-webkit-transform:perspective(1px) translateY(-50%);
+	-ms-transform:perspective(1px) translateY(-50%);
+	transform:perspective(1px) translateY(-50%);
+}
+
