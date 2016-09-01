@@ -3,7 +3,7 @@
         ul {
             li {
                 line-height: 3.5rem;
-                @include respondTo(notdesktop){
+                @include respondTo(notdesktop) {
                     line-height: 2.5rem;
                 }
             }
@@ -19,4 +19,28 @@
             border-color: palette(black);
         }
     }
+
+    .about-us-section {
+        .block-about-us {
+            .block-content {
+                @include transition();
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                margin:0 auto;
+                padding: 0;
+                @include transform(scale(0) perspective(1px) translateY(-50%));
+            }
+            &:hover {
+                .block-content {
+                    @include transform(scale(1) perspective(1px) translateY(-50%));
+                }
+            }
+            .block-background__filter {
+                opacity: .8;
+            }
+        }
+    }
+
 }
