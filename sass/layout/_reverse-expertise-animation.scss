@@ -1,5 +1,6 @@
 .reverse-expertise {
     .expertise-block {
+        border: none;
         .expertise-container {
             bottom: 50%;
             @include transform(translateY(50%));
@@ -11,7 +12,20 @@
                 margin: 1.5rem 30% 0;
                 @include transform(scale(1));
             }
+            &:before {
+                background-color: inherit;
+
+            }
         }
+        &__text {
+            @include vertical-align();
+            width: 70%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            color: palette(white, base);
+        }
+
         &:hover {
             .expertise-container {
                 bottom: -10%;
