@@ -9,7 +9,14 @@
             }
         }
     }
-    .testimonial-single {
-        background-color: palette(blue, light);
+
+    .view-more-url {
+        &:hover {
+            color: palette(white, dark);
+        }
+        span {
+            color: palette(black);
+            border-color: palette(black);
+        }
     }
 }
