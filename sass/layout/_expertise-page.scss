@@ -119,10 +119,29 @@
                     padding: 50% 0;
                 }
             }
+            @include respondTo(tablet) {
+                width: 23rem;
+                height: 23rem;
+            }
+
+            @include respondTo(phone) {
+                margin: 0 auto;
+            }
+
+            @include respondTo(smallPhone) {
+                width: 23rem;
+                height: 23rem;
+            }
             .expertise-container {
                 min-height: 9rem;
                 &:before {
                     background-color: palette(green);
+                }
+                @include respondTo(tablet) {
+                    min-height: 7rem;
+                }
+                @include respondTo(smallPhone) {
+                    min-height: 7rem;
                 }
             }
             .expertise-container__title {
@@ -131,9 +150,21 @@
                 h3 {
                     margin-top: 0;
                 }
+                @include respondTo(tablet) {
+                    font-size: 2.2rem;
+                }
             }
+
+
             &__image {
                 height: 100%;
+            }
+
+        }
+        .expertise-circle__description {
+            @include respondTo(phone) {
+                width: 70%;
+                margin: 0 auto;
             }
         }
     }
