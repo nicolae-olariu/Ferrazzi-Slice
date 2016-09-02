@@ -48,7 +48,7 @@
             }
 
             .h4,
-            .h3 {
+            .h2 {
                 font-size: 2.5rem;
             }
 
@@ -93,7 +93,7 @@
         }
 
         .h4,
-        .h3{
+        .h2 {
             @include transition();
         }
 
@@ -113,9 +113,23 @@
             height: 30rem;
             border-radius: 50%;
             -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
-            .expertise-container__title {
-                &:hover {
+            border-color: palette(green);
+            &:hover {
+                .expertise-container__title {
                     padding: 50% 0;
+                }
+            }
+            .expertise-container {
+                min-height: 9rem;
+                &:before {
+                    background-color: palette(green);
+                }
+            }
+            .expertise-container__title {
+                margin: 0;
+                padding: 0;
+                h3 {
+                    margin-top: 0;
                 }
             }
             &__image {
