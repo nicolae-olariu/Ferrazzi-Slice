@@ -111,12 +111,12 @@
         .expertise-block {
             width: 30rem;
             height: 30rem;
-            border-radius: 50%;
+            @include border-radius(50%);
             -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
             border-color: palette(green);
             &:hover {
                 .expertise-container__title {
-                    padding: 50% 0;
+                    padding: 15rem 0;
                 }
             }
             @include respondTo(tablet) {
