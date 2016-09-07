@@ -34,7 +34,7 @@
              ng-class="{'form__is-expanded': ctrl.formExpanded}"
         >
 
-          <form name="ctrl.careersForm" ng-submit="ctrl.submitForm()">
+          <form name="contactForm" ng-submit="ctrl.submitForm()">
 
             <div class="green__color reset margin-bottom-2 padding-top-1 padding-bottom-1">
               <h2>Apply</h2>
@@ -91,26 +91,15 @@
             <div class="col-xs-12">
               <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="row">
-                  <div ng-if="ctrl.cvFile" class="paragraph black__color--dark form__label">
-                    <h5>Cv File</h5>
-                  </div>
-                  <div class="text-ellipsis">
-                    <p>{{ ctrl.cvFile }}</p>
+                  <!--<div ng-if="ctrl.cvFile" class="paragraph black__color&#45;&#45;dark form__label">-->
+                  <!--<h5>Cv File</h5>-->
+                  <!--</div>-->
+                  <div class="cv-name text-ellipsis paragraph black__color--dark form__label">
+                    <p></p>
                   </div>
                 </div>
               </div>
 
-              <div class="col-md-8 col-sm-8 col-xs-12">
-                <div class="row padding-left-2">
-                  <div ng-if="ctrl.objectKeys(ctrl.aditionalItems).length"
-                       class="paragraph black__color--dark form__label">
-                    <h5>Additional Items</h5>
-                  </div>
-                  <div ng-repeat="aditional in ctrl.aditionalItems" class="text-ellipsis margin-bottom--1">
-                    <p>{{aditional.name}}</p>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <div class="col-md-8 col-sm-8 col-xs-12">
@@ -121,14 +110,12 @@
                            class="btn btn-slider position-section__button white__hover-color white__color--dark blue__bg--light blue__hover-bg text-uppercase"
                     >Upload Resume</label>
                     <input
+                      class="upload-cv"
                       type="file"
                       name="cv"
                       id="cv"
                       accept="application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-powerpoint, text/plain, application/pdf"
                       style="display: none">
-                    <label for="cv"
-                           class="info-label padding-left-2"
-                    >Must be less than 2MB doc or pdf format only</label>
                   </div>
                 </div>
 
@@ -193,8 +180,6 @@
     <p>TOP</p>
   </div>
 </footer>
-
-<input type="tel">
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="js/xivic.js"></script>
