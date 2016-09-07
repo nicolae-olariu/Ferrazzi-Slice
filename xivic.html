@@ -34,7 +34,7 @@
              ng-class="{'form__is-expanded': ctrl.formExpanded}"
         >
 
-          <form name="contactForm" ng-submit="ctrl.submitForm()">
+          <form name="contactForm">
 
             <div class="green__color reset margin-bottom-2 padding-top-1 padding-bottom-1">
               <h2>Apply</h2>
@@ -43,21 +43,21 @@
               <div class="col-sm-6 col-xs-12 pad">
                 <ul class="list-unstyled padding-right-3 position-section__ul">
                   <li>
-                    <label for="firstName" class="form__label form__label--required">First Name</label>
+                    <label for="name" class="form__label form__label--required">First Name</label>
                     <input class="form__input form__input--required"
                            type="text"
-                           id="firstName"
-                           name="firstName"
-                           ng-model="ctrl.firstName"
+                           id="name"
+                           name="name"
+                           ng-model="ctrl.name"
                            required>
                   </li>
                   <li>
                     <label for="phone" class="form__label form__label--required">Phone</label>
                     <input class="form__input form__input--required"
-                           type="number"
+                           type="text"
                            id="phone"
-                           name="firstName"
-                           ng-model="ctrl.firstName"
+                           name="phone"
+                           ng-model="ctrl.phone"
                            required>
                   </li>
                 </ul>
@@ -78,15 +78,13 @@
               </div>
             </div>
 
-            <label for="coverLetter" class="form__label form__label--required">Description</label>
+            <label for="description" class="form__label form__label--required">Description</label>
             <textarea class="form__input form__input--required form__input--textarea"
-                      name="coverLetter"
-                      id="coverLetter"
+                      name="description"
+                      id="description"
                       cols="30"
                       rows="10"
-                      ng-model="ctrl.coverLetter"
-                      required>
-            </textarea>
+                      required></textarea>
 
             <div class="col-xs-12">
               <div class="col-md-4 col-sm-4 col-xs-12">
@@ -99,7 +97,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
 
             <div class="col-md-8 col-sm-8 col-xs-12">
@@ -180,6 +177,7 @@
 </footer>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
 <script src="js/xivic.js"></script>
 </body>
 </html>
