@@ -28,7 +28,6 @@ $( document ).ready(function() {
   contactForm.on("submit", function (event) {
     event.preventDefault();
     var formData = new FormData(this);
-    // console.log( $( this ).serialize() );
     $.ajax({
       url: 'php/upload-form.php',
       type: 'POST',
@@ -41,8 +40,6 @@ $( document ).ready(function() {
       contentType: false,
       processData: false
     });
-
-
 
     return false;
   })
