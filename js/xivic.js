@@ -1,7 +1,7 @@
 $(document).ready(function () {
   "use strict";
 
-  var applyButton, applyForm, htmlBody, formId, uploadCv, textCv, contactForm, emailInput;
+  var applyButton, applyForm, htmlBody, formId, uploadCv, textCv, contactForm, submitButton;
 
   applyButton = $('.apply-button');
   applyForm = $('.position-section__form');
@@ -10,7 +10,7 @@ $(document).ready(function () {
   uploadCv = $('.upload-cv');
   textCv = $('.cv-name > p');
   contactForm = $('form[name="contactForm"]');
-  emailInput = $('input[name="email"]');
+  submitButton = $('.position-section__button--submit');
 
   applyButton.on('click', function () {
     applyForm.addClass('form__is-expanded');
@@ -26,10 +26,14 @@ $(document).ready(function () {
     textCv.text(fileName);
   });
 
-  function validateEmail(email) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+  function animationSubmit() {
+    debugger
+    submitButton.addClass('submit-error');
+    setTimeout(function () {
+      submitButton.removeClass('submit-error');
+    }, 1000);
   }
+
   contactForm.validate({
     debug: true,
     ignore: [],
@@ -59,9 +63,8 @@ $(document).ready(function () {
       },
       cv: 'Please upload your cv'
     },
-    invalidHandler: function (form) {
-      debugger;
-
+    invalidHandler: function () {
+      animationSubmit();
     },
     submitHandler: function (form) {
       var formData = new FormData(form);

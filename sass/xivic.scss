@@ -1,5 +1,6 @@
 @import "functions/variables";
 @import "functions/mixin";
+@import "blocks/settings";
 
 .cover-container {
     width: 100%;
@@ -29,4 +30,8 @@ input {
 
 .error {
     color: firebrick;
+}
+
+.position-section__button--submit {
+    transform: translateX(20px);
 }
