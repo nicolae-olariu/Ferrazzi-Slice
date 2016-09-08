@@ -26,6 +26,9 @@ $(document).ready(function () {
     fileName = fileName ? fileName.name : '';
     // name of the file in html
     textCv.text(fileName);
+    //label removal for input type
+    var currentInput = e.target;
+    $(currentInput.labels[1]).addClass('hidden');
   });
 
   //button shake animation
@@ -56,43 +59,39 @@ $(document).ready(function () {
     return valid;
   }
 
-  function validateRequired() {
-
-  }
 
 
   contactForm.on("submit", function (event) {
     event.preventDefault();
-    // debugger;
-    $(this).find('input').each(function(){
+    var fail = false;
+    $(this).find('input, textarea').each(function(){
       var singleInput = $(this);
       singleInput.on('focus', function () {
         $(this.labels[1]).addClass('hidden');
       });
-      if(!singleInput.prop('required')){
-        console.log("NR");
-      } else {
+      if(singleInput.prop('required')) {
         if (!singleInput.val()) {
           $(this.labels[1]).removeClass('hidden');
+          fail = true;
         }
       }
     });
-    console.log(validateEmail(emailField.val()));
 
-
-    // var formData = new FormData(this);
-    // $.ajax({
-    //   url: 'php/upload-form.php',
-    //   type: 'POST',
-    //   data: formData,
-    //   async: false,
-    //   success: function (data) {
-    //     alert(data)
-    //   },
-    //   cache: false,
-    //   contentType: false,
-    //   processData: false
-    // });
+    // if (fail) {
+    //   var formData = new FormData(this);
+    //   $.ajax({
+    //     url: 'php/upload-form.php',
+    //     type: 'POST',
+    //     data: formData,
+    //     async: false,
+    //     success: function (data) {
+    //       alert(data)
+    //     },
+    //     cache: false,
+    //     contentType: false,
+    //     processData: false
+    //   });
+    // }
 
     return false;
   })
